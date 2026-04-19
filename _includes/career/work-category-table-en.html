@@ -1,9 +1,17 @@
-<h3>Category Summary Table</h3>
-<table>
-  <thead>
-<tr><th>Category</th><th>Experience</th><th>Top 5 by experience (within category)</th></tr>
-  </thead>
-  <tbody>
+<style>
+.career-category-summary-grid { display: grid; grid-template-columns: repeat(2, minmax(320px, 1fr)); gap: 16px; align-items: start; }
+.career-category-summary-panel h3 { margin: 0 0 8px; }
+.career-category-summary-panel table { width: 100%; margin: 0; }
+@media (max-width: 900px) { .career-category-summary-grid { grid-template-columns: 1fr; } }
+</style>
+<div class="career-category-summary-grid">
+  <section class="career-category-summary-panel">
+    <h3>Category Summary Table</h3>
+    <table>
+      <thead>
+      <tr><th>Category</th><th>Experience</th><th>Top 5 by experience (within category)</th></tr>
+      </thead>
+      <tbody>
   <tr>
     <td>Cloud</td>
     <td>2y 6m</td>
@@ -34,15 +42,16 @@
     <td>3y</td>
     <td>batch (1y 6m)<br>Customer Support (1y 4m)<br>Troubleshooting (1y 4m)<br>Amazon Bedrock (1y)<br>Security Hub (1y)</td>
   </tr>
-  </tbody>
-</table>
-
-<h3>Top 5 Technologies by Experience (Overall)</h3>
-<table>
-  <thead>
-    <tr><th>Rank</th><th>Technology</th><th>Category</th><th>Experience</th></tr>
-  </thead>
-  <tbody>
+      </tbody>
+    </table>
+  </section>
+  <section class="career-category-summary-panel">
+    <h3>Top 5 Technologies by Experience (Overall)</h3>
+    <table>
+      <thead>
+      <tr><th>Rank</th><th>Technology</th><th>Category</th><th>Experience</th></tr>
+      </thead>
+      <tbody>
   <tr>
     <td>1</td>
     <td>AWS</td>
@@ -73,5 +82,7 @@
     <td>Coding</td>
     <td>2y 4m</td>
   </tr>
-  </tbody>
-</table>
+      </tbody>
+    </table>
+  </section>
+</div>

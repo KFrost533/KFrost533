@@ -36,8 +36,8 @@
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Kentafrost&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kentafrost&layout=compact&langs_count=7&theme=tokyonight"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=KFrost533&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KFrost533&layout=compact&langs_count=7&theme=tokyonight"/>
 
 </div>
 
@@ -60,7 +60,7 @@
 
 ## 📚 Learning & Growth
 
-🔗 **詳細なポートフォリオ**: [GitHub Pages サイト](https://kentafrost.github.io/Kentafrost/)で学習ノート、プロジェクト詳細、キャリア情報をご覧いただけます。
+🔗 **詳細なポートフォリオ**: [GitHub Pages サイト](https://KFrost533.github.io/KFrost533/)で学習ノート、プロジェクト詳細、キャリア情報をご覧いただけます。
 
 ---
 
@@ -68,6 +68,6 @@
 
 💡 **"実際にコードを書くことやCourseraといったオンライン学習を通して、学習を継続しております。"**
 
-⭐️ From [Kentafrost](https://github.com/Kentafrost)
+⭐️ From [Kentafrost](https://github.com/KFrost533)
 
 </div>

@@ -335,50 +335,46 @@ function renderWorkCategoryTable(experiences: Experience[], locale: 'jp' | 'en')
     })
     .join('\n');
 
-  if (locale === 'jp') {
-    return [
-      '<h3>カテゴリ別サマリー（表）</h3>',
-      '<table>',
-      '  <thead>',
-      '<tr><th>カテゴリ</th><th>経験量</th><th>経験TOP5（カテゴリ内）</th></tr>',
-      '  </thead>',
-      '  <tbody>',
-      categoryRows,
-      '  </tbody>',
-      '</table>',
-      '',
-      '<h3>経験技術 TOP5（全体）</h3>',
-      '<table>',
-      '  <thead>',
-      '    <tr><th>順位</th><th>技術</th><th>カテゴリ</th><th>経験量</th></tr>',
-      '  </thead>',
-      '  <tbody>',
-      overallTopRows,
-      '  </tbody>',
-      '</table>',
-    ].join('\n');
-  }
+  const categoryTitle = locale === 'jp' ? 'カテゴリ別サマリー（表）' : 'Category Summary Table';
+  const overallTitle = locale === 'jp' ? '経験技術 TOP5（全体）' : 'Top 5 Technologies by Experience (Overall)';
+  const categoryHeaderRow = locale === 'jp'
+    ? '<tr><th>カテゴリ</th><th>経験量</th><th>経験TOP5（カテゴリ内）</th></tr>'
+    : '<tr><th>Category</th><th>Experience</th><th>Top 5 by experience (within category)</th></tr>';
+  const overallHeaderRow = locale === 'jp'
+    ? '<tr><th>順位</th><th>技術</th><th>カテゴリ</th><th>経験量</th></tr>'
+    : '<tr><th>Rank</th><th>Technology</th><th>Category</th><th>Experience</th></tr>';
 
   return [
-    '<h3>Category Summary Table</h3>',
-    '<table>',
-    '  <thead>',
-      '<tr><th>Category</th><th>Experience</th><th>Top 5 by experience (within category)</th></tr>',
-    '  </thead>',
-    '  <tbody>',
+    '<style>',
+    '.career-category-summary-grid { display: grid; grid-template-columns: repeat(2, minmax(320px, 1fr)); gap: 16px; align-items: start; }',
+    '.career-category-summary-panel h3 { margin: 0 0 8px; }',
+    '.career-category-summary-panel table { width: 100%; margin: 0; }',
+    '@media (max-width: 900px) { .career-category-summary-grid { grid-template-columns: 1fr; } }',
+    '</style>',
+    '<div class="career-category-summary-grid">',
+    '  <section class="career-category-summary-panel">',
+    `    <h3>${categoryTitle}</h3>`,
+    '    <table>',
+    '      <thead>',
+    `      ${categoryHeaderRow}`,
+    '      </thead>',
+    '      <tbody>',
     categoryRows,
-    '  </tbody>',
-    '</table>',
-    '',
-    '<h3>Top 5 Technologies by Experience (Overall)</h3>',
-    '<table>',
-    '  <thead>',
-    '    <tr><th>Rank</th><th>Technology</th><th>Category</th><th>Experience</th></tr>',
-    '  </thead>',
-    '  <tbody>',
+    '      </tbody>',
+    '    </table>',
+    '  </section>',
+    '  <section class="career-category-summary-panel">',
+    `    <h3>${overallTitle}</h3>`,
+    '    <table>',
+    '      <thead>',
+    `      ${overallHeaderRow}`,
+    '      </thead>',
+    '      <tbody>',
     overallTopRows,
-    '  </tbody>',
-    '</table>',
+    '      </tbody>',
+    '    </table>',
+    '  </section>',
+    '</div>',
   ].join('\n');
 }
 
