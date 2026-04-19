@@ -4,7 +4,7 @@ title: "Career Summary & Work Experience"
 subtitle: "AWS運用エンジニア → 開発エンジニアへのキャリアチェンジを目指す"
 description: "KFrost career summary and work experience details"
 date: 2025-01-01
-last_modified_at: 2026-04-19
+last_modified_at: 2026-04-20
 show_toc: true
 permalink: /career/en
 ---
@@ -62,4 +62,4 @@ Star rating guide: ★4 (3+ years) / ★3 (2+ years) / ★2 (1+ year) / ★1 (un
 
 ---
 
-*Last Updated: 2026-04-19 | This page is updated regularly*
+*Last Updated: 2026-04-20 | This page is updated regularly*
