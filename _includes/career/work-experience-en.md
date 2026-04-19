@@ -20,7 +20,7 @@
 
 ### 💻 OSS Operations and Development Engineer (Jan 2026 – Present)
 
-| **Duration** | 2 months, Ongoing |
+| **Duration** | 3 months, Ongoing |
 |------|------|
 | **Scope** | Open Source Operations, Improvement and Validation |
 | **Key Technologies** | Java (2 months)<br/>Springboot(mainly check, some modification) (2 months)<br/>Wicket (2 months)<br/>XML (2 months)<br/>Linux (2 months)<br/>Docker (2 months)<br/>Bash (2 months)<br/>OSS Management (2 months)<br/>AWS (2 months)<br/>Kubernetes (2 months)<br/>Git/GitHub (2 months)<br/>Git Workflow (2 months)<br/>CI/CD (2 months)<br/>DevOps (2 months)<br/>Gradle (2 months)<br/>REST API (2 months)<br/>English to Japanese Translation (2 months)<br/>Japanese to English Translation (2 months)<br/>English Communication (2 months)<br/>Technical Documentation (2 months) |

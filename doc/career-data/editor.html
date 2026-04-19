@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Career Data Editor</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --line: #d5dde8;
+      --text: #1f2a37;
+      --sub: #576578;
+      --accent: #0f766e;
+      --danger: #b91c1c;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(160deg, #eef6ff 0%, #f6f8fc 40%, #f4fbf7 100%);
+    }
+    .wrap {
+      max-width: 1400px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.05);
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 0 8px;
+    }
+    .sub {
+      color: var(--sub);
+      margin: 0;
+      font-size: 13px;
+    }
+    .controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    select, button, input, textarea {
+      font: inherit;
+    }
+    select, input, textarea {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 6px 8px;
+      width: 100%;
+      box-sizing: border-box;
+      background: #fff;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 44px;
+    }
+    button {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      padding: 7px 10px;
+      cursor: pointer;
+    }
+    button.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: #0f766e;
+    }
+    button.danger {
+      background: #fff;
+      color: var(--danger);
+      border-color: #efb2b2;
+    }
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .status {
+      font-size: 13px;
+      color: var(--sub);
+      min-height: 18px;
+      margin-top: 6px;
+      white-space: pre-wrap;
+    }
+    .table-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    table {
+      border-collapse: collapse;
+      width: max(100%, 1200px);
+    }
+    th, td {
+      border-bottom: 1px solid #e4e9f0;
+      vertical-align: top;
+      padding: 6px;
+      text-align: left;
+    }
+    th {
+      position: sticky;
+      top: 0;
+      background: #e8f1fb;
+      z-index: 1;
+      font-size: 12px;
+    }
+    tr:nth-child(even) td {
+      background: #fafcff;
+    }
+    .cell-num {
+      color: var(--sub);
+      width: 60px;
+      white-space: nowrap;
+    }
+    .row-actions {
+      min-width: 130px;
+      white-space: nowrap;
+    }
+    .hint {
+      font-size: 11px;
+      color: var(--sub);
+      margin-top: 4px;
+    }
+    .footer-actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .preview-title {
+      margin: 0 0 8px;
+      font-size: 13px;
+      color: var(--sub);
+    }
+    .json-preview {
+      min-height: 180px;
+      font-family: Consolas, "Courier New", monospace;
+      background: #f9fbfe;
+    }
+    @media (max-width: 720px) {
+      .wrap { padding: 0 10px; }
+      h1 { font-size: 18px; }
+      table { width: 1100px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel">
+      <h1>Career Data Editor</h1>
+      <p class="sub">項目を選択すると、対応するJSONを表形式で編集できます。行ごとの更新と追加に対応しています。</p>
+    </div>
+
+    <div class="panel controls">
+      <label for="datasetSelect">編集項目:</label>
+      <select id="datasetSelect" style="max-width: 320px;"></select>
+      <button id="openFolderBtn" class="primary">career-data フォルダを開く</button>
+      <button id="makeLocalBtn">.local.json を作成</button>
+      <button id="loadBtn">再読込</button>
+      <button id="previewBtn">JSON内容を表示</button>
+      <button id="saveBtn" class="primary">全体保存</button>
+    </div>
+
+    <div class="panel">
+      <div id="status" class="status"></div>
+      <p class="preview-title" id="previewTitle">現在のJSON: 未読込</p>
+      <textarea id="jsonPreview" class="json-preview" readonly placeholder="ここに現在のJSON内容を表示します"></textarea>
+      <div class="table-wrap">
+        <table id="editorTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="footer-actions">
+        <button id="addRowBtn" class="primary">+ 追加</button>
+      </div>
+      <p class="hint">メモ: 配列項目は改行区切りで入力。JSON項目は有効なJSON形式で入力。</p>
+    </div>
+  </div>
+
+  <script>
+    const SCHEMAS = {
+      "career-summary": {
+        file: "career-summary.json",
+        label: "キャリアサマリー",
+        columns: [
+          { key: "keyJp", label: "keyJp", type: "string" },
+          { key: "keyEn", label: "keyEn", type: "string" },
+          { key: "valueJp", label: "valueJp", type: "string" },
+          { key: "valueEn", label: "valueEn", type: "string" },
+          { key: "listJp", label: "listJp", type: "stringArray" },
+          { key: "listEn", label: "listEn", type: "stringArray" }
+        ]
+      },
+      "future-learning-plan": {
+        file: "future-learning-plan.json",
+        label: "学習計画",
+        columns: [
+          { key: "priorityJp", label: "priorityJp", type: "string" },
+          { key: "priorityEn", label: "priorityEn", type: "string" },
+          { key: "domainJp", label: "domainJp", type: "string" },
+          { key: "domainEn", label: "domainEn", type: "string" },
+          { key: "technologiesJp", label: "technologiesJp", type: "string" },
+          { key: "technologiesEn", label: "technologiesEn", type: "string" },
+          { key: "timelineJp", label: "timelineJp", type: "string" },
+          { key: "timelineEn", label: "timelineEn", type: "string" },
+          { key: "purposeJp", label: "purposeJp", type: "string" },
+          { key: "purposeEn", label: "purposeEn", type: "string" }
+        ]
+      },
+      "future-work-roadmap": {
+        file: "future-work-roadmap.json",
+        label: "将来業務ロードマップ",
+        columns: [
+          { key: "periodJp", label: "periodJp", type: "string" },
+          { key: "periodEn", label: "periodEn", type: "string" },
+          { key: "objectiveJp", label: "objectiveJp", type: "string" },
+          { key: "objectiveEn", label: "objectiveEn", type: "string" },
+          { key: "initiativesJp", label: "initiativesJp", type: "stringArray" },
+          { key: "initiativesEn", label: "initiativesEn", type: "stringArray" },
+          { key: "metricsJp", label: "metricsJp", type: "string" },
+          { key: "metricsEn", label: "metricsEn", type: "string" }
+        ]
+      },
+      "language-skills": {
+        file: "language-skills.json",
+        label: "言語スキル",
+        columns: [
+          { key: "jpName", label: "jpName", type: "string" },
+          { key: "enName", label: "enName", type: "string" },
+          { key: "jpLevel", label: "jpLevel", type: "string" },
+          { key: "enLevel", label: "enLevel", type: "string" },
+          { key: "jpExperience", label: "jpExperience", type: "string" },
+          { key: "enExperience", label: "enExperience", type: "string" },
+          { key: "jpUsage", label: "jpUsage", type: "string" },
+          { key: "enUsage", label: "enUsage", type: "string" }
+        ]
+      },
+      "learning-technologies": {
+        file: "learning-technologies.json",
+        label: "学習中技術",
+        columns: [
+          { key: "jpName", label: "jpName", type: "string" },
+          { key: "enName", label: "enName", type: "string" },
+          { key: "years", label: "years", type: "number" },
+          { key: "months", label: "months", type: "number" },
+          { key: "certifications", label: "certifications", type: "stringArray" }
+        ]
+      },
+      "personal-projects": {
+        file: "personal-projects.json",
+        label: "個人開発",
+        columns: [
+          { key: "nameJp", label: "nameJp", type: "string" },
+          { key: "nameEn", label: "nameEn", type: "string" },
+          { key: "periodJp", label: "periodJp", type: "string" },
+          { key: "periodEn", label: "periodEn", type: "string" },
+          { key: "technologiesJp", label: "technologiesJp", type: "stringArray" },
+          { key: "technologiesEn", label: "technologiesEn", type: "stringArray" },
+          { key: "achievementsJp", label: "achievementsJp", type: "stringArray" },
+          { key: "achievementsEn", label: "achievementsEn", type: "stringArray" },
+          { key: "progressJp", label: "progressJp", type: "string" },
+          { key: "progressEn", label: "progressEn", type: "string" },
+          { key: "linkUrl", label: "linkUrl", type: "string" },
+          { key: "linkLabelJp", label: "linkLabelJp", type: "string" },
+          { key: "linkLabelEn", label: "linkLabelEn", type: "string" }
+        ]
+      },
+      "certifications": {
+        file: "certifications.json",
+        label: "資格・認定",
+        flattened: true,
+        columns: [
+          { key: "categoryJp", label: "categoryJp", type: "string" },
+          { key: "categoryEn", label: "categoryEn", type: "string" },
+          { key: "name", label: "name", type: "string" },
+          { key: "obtainedJp", label: "obtainedJp", type: "string" },
+          { key: "obtainedEn", label: "obtainedEn", type: "string" },
+          { key: "usageJp", label: "usageJp", type: "string" },
+          { key: "usageEn", label: "usageEn", type: "string" }
+        ]
+      },
+      "work-experiences": {
+        file: "work-experiences.json",
+        label: "職歴",
+        columns: [
+          { key: "id", label: "id", type: "string" },
+          { key: "startYm", label: "startYm", type: "string" },
+          { key: "endYm", label: "endYm", type: "nullableString" },
+          { key: "isCurrent", label: "isCurrent", type: "boolean" },
+          { key: "jpRole", label: "jp.role", type: "string" },
+          { key: "jpScope", label: "jp.scope", type: "string" },
+          { key: "jpAchievements", label: "jp.achievements", type: "stringArray" },
+          { key: "jpTechnologies", label: "jp.technologies(JSON)", type: "json" },
+          { key: "enRole", label: "en.role", type: "string" },
+          { key: "enScope", label: "en.scope", type: "string" },
+          { key: "enAchievements", label: "en.achievements", type: "stringArray" },
+          { key: "enTechnologies", label: "en.technologies(JSON)", type: "json" }
+        ]
+      }
+    };
+
+    const state = {
+      dirHandle: null,
+      datasetKey: "career-summary",
+      rawRows: [],
+      workingRows: []
+    };
+
+    const datasetSelect = document.getElementById("datasetSelect");
+    const openFolderBtn = document.getElementById("openFolderBtn");
+    const loadBtn = document.getElementById("loadBtn");
+    const previewBtn = document.getElementById("previewBtn");
+    const makeLocalBtn = document.getElementById("makeLocalBtn");
+    const saveBtn = document.getElementById("saveBtn");
+    const addRowBtn = document.getElementById("addRowBtn");
+    const statusEl = document.getElementById("status");
+    const previewTitleEl = document.getElementById("previewTitle");
+    const jsonPreviewEl = document.getElementById("jsonPreview");
+    const tableHead = document.querySelector("#editorTable thead");
+    const tableBody = document.querySelector("#editorTable tbody");
+
+    function setStatus(text, isError = false) {
+      statusEl.textContent = text;
+      statusEl.style.color = isError ? "#b91c1c" : "#576578";
+    }
+
+    function setPreview(fileName, text) {
+      previewTitleEl.textContent = "現在のJSON: " + (fileName || "未読込");
+      jsonPreviewEl.value = text || "";
+    }
+
+    function schema() {
+      return SCHEMAS[state.datasetKey];
+    }
+
+    function toLocalFileName(fileName) {
+      return fileName.replace(/\.json$/i, ".local.json");
+    }
+
+    async function existsFile(fileName) {
+      if (!state.dirHandle) return false;
+      try {
+        await state.dirHandle.getFileHandle(fileName, { create: false });
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    async function resolveTargetFileName() {
+      const baseName = schema().file;
+      const localName = toLocalFileName(baseName);
+      if (await existsFile(localName)) {
+        return localName;
+      }
+      return baseName;
+    }
+
+    function fillDatasetOptions() {
+      Object.entries(SCHEMAS).forEach(([key, meta]) => {
+        const opt = document.createElement("option");
+        opt.value = key;
+        opt.textContent = meta.label + " (" + meta.file + ")";
+        datasetSelect.appendChild(opt);
+      });
+      datasetSelect.value = state.datasetKey;
+    }
+
+    function normalizeRowsForEdit(datasetKey, data) {
+      if (datasetKey === "certifications") {
+        const rows = [];
+        for (const group of data) {
+          for (const item of group.items || []) {
+            rows.push({
+              categoryJp: group.categoryJp || "",
+              categoryEn: group.categoryEn || "",
+              name: item.name || "",
+              obtainedJp: item.obtainedJp || "",
+              obtainedEn: item.obtainedEn || "",
+              usageJp: item.usageJp || "",
+              usageEn: item.usageEn || ""
+            });
+          }
+        }
+        return rows;
+      }
+
+      if (datasetKey === "work-experiences") {
+        return data.map((exp) => ({
+          id: exp.id || "",
+          startYm: exp.startYm || "",
+          endYm: exp.endYm == null ? "" : String(exp.endYm),
+          isCurrent: Boolean(exp.isCurrent),
+          jpRole: exp.jp?.role || "",
+          jpScope: exp.jp?.scope || "",
+          jpAchievements: exp.jp?.achievements || [],
+          jpTechnologies: exp.jp?.technologies || [],
+          enRole: exp.en?.role || "",
+          enScope: exp.en?.scope || "",
+          enAchievements: exp.en?.achievements || [],
+          enTechnologies: exp.en?.technologies || []
+        }));
+      }
+
+      return data;
+    }
+
+    function denormalizeRowsForSave(datasetKey, rows) {
+      if (datasetKey === "certifications") {
+        const map = new Map();
+        const order = [];
+        for (const row of rows) {
+          const key = (row.categoryJp || "") + "||" + (row.categoryEn || "");
+          if (!map.has(key)) {
+            map.set(key, {
+              categoryJp: row.categoryJp || "",
+              categoryEn: row.categoryEn || "",
+              items: []
+            });
+            order.push(key);
+          }
+          map.get(key).items.push({
+            name: row.name || "",
+            obtainedJp: row.obtainedJp || "",
+            obtainedEn: row.obtainedEn || "",
+            usageJp: row.usageJp || "",
+            usageEn: row.usageEn || ""
+          });
+        }
+        return order.map((k) => map.get(k));
+      }
+
+      if (datasetKey === "work-experiences") {
+        return rows.map((row) => ({
+          id: row.id || "",
+          startYm: row.startYm || "",
+          endYm: row.endYm ? row.endYm : null,
+          isCurrent: Boolean(row.isCurrent),
+          jp: {
+            role: row.jpRole || "",
+            scope: row.jpScope || "",
+            achievements: row.jpAchievements || [],
+            technologies: row.jpTechnologies || []
+          },
+          en: {
+            role: row.enRole || "",
+            scope: row.enScope || "",
+            achievements: row.enAchievements || [],
+            technologies: row.enTechnologies || []
+          }
+        }));
+      }
+
+      return rows;
+    }
+
+    function inputToValue(input, type) {
+      if (type === "number") {
+        return input.value === "" ? 0 : Number(input.value);
+      }
+      if (type === "boolean") {
+        return input.checked;
+      }
+      if (type === "stringArray") {
+        return input.value
+          .split(/\r?\n/)
+          .map((s) => s.trim())
+          .filter(Boolean);
+      }
+      if (type === "json") {
+        const v = input.value.trim();
+        if (!v) return [];
+        return JSON.parse(v);
+      }
+      if (type === "nullableString") {
+        const v = input.value.trim();
+        return v;
+      }
+      return input.value;
+    }
+
+    function valueToInputValue(value, type) {
+      if (type === "stringArray") {
+        return Array.isArray(value) ? value.join("\n") : "";
+      }
+      if (type === "json") {
+        return JSON.stringify(value || [], null, 2);
+      }
+      if (type === "boolean") {
+        return Boolean(value);
+      }
+      return value == null ? "" : String(value);
+    }
+
+    function createInput(rowIndex, col) {
+      const row = state.workingRows[rowIndex];
+      const current = row[col.key];
+
+      if (col.type === "boolean") {
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = valueToInputValue(current, col.type);
+        checkbox.addEventListener("change", () => {
+          row[col.key] = inputToValue(checkbox, col.type);
+        });
+        return checkbox;
+      }
+
+      const isLong = col.type === "stringArray" || col.type === "json";
+      const el = document.createElement(isLong ? "textarea" : "input");
+      if (!isLong) {
+        el.type = col.type === "number" ? "number" : "text";
+      }
+      el.value = valueToInputValue(current, col.type);
+      el.addEventListener("input", () => {
+        try {
+          row[col.key] = inputToValue(el, col.type);
+          el.style.borderColor = "#d5dde8";
+        } catch (e) {
+          el.style.borderColor = "#b91c1c";
+        }
+      });
+      return el;
+    }
+
+    function renderTable() {
+      const s = schema();
+      tableHead.innerHTML = "";
+      tableBody.innerHTML = "";
+
+      const trHead = document.createElement("tr");
+      const thNum = document.createElement("th");
+      thNum.textContent = "#";
+      trHead.appendChild(thNum);
+
+      for (const col of s.columns) {
+        const th = document.createElement("th");
+        th.textContent = col.label;
+        trHead.appendChild(th);
+      }
+
+      const thAction = document.createElement("th");
+      thAction.textContent = "Actions";
+      trHead.appendChild(thAction);
+      tableHead.appendChild(trHead);
+
+      state.workingRows.forEach((_, i) => {
+        const tr = document.createElement("tr");
+
+        const tdNum = document.createElement("td");
+        tdNum.className = "cell-num";
+        tdNum.textContent = String(i + 1);
+        tr.appendChild(tdNum);
+
+        for (const col of s.columns) {
+          const td = document.createElement("td");
+          td.appendChild(createInput(i, col));
+          tr.appendChild(td);
+        }
+
+        const tdAction = document.createElement("td");
+        tdAction.className = "row-actions";
+
+        const updateBtn = document.createElement("button");
+        updateBtn.textContent = "更新";
+        updateBtn.className = "primary";
+        updateBtn.addEventListener("click", async () => {
+          try {
+            await saveToFile();
+            setStatus((i + 1) + "行目を更新しました。");
+          } catch (err) {
+            setStatus("更新に失敗: " + err.message, true);
+          }
+        });
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "削除";
+        deleteBtn.className = "danger";
+        deleteBtn.style.marginLeft = "6px";
+        deleteBtn.addEventListener("click", () => {
+          state.workingRows.splice(i, 1);
+          renderTable();
+        });
+
+        tdAction.appendChild(updateBtn);
+        tdAction.appendChild(deleteBtn);
+        tr.appendChild(tdAction);
+        tableBody.appendChild(tr);
+      });
+    }
+
+    function emptyRow() {
+      const row = {};
+      for (const col of schema().columns) {
+        if (col.type === "number") row[col.key] = 0;
+        else if (col.type === "boolean") row[col.key] = false;
+        else if (col.type === "stringArray") row[col.key] = [];
+        else if (col.type === "json") row[col.key] = [];
+        else row[col.key] = "";
+      }
+      return row;
+    }
+
+    async function getDataFileHandle() {
+      if (!state.dirHandle) throw new Error("先に career-data フォルダを開いてください。");
+      const fileName = await resolveTargetFileName();
+      return await state.dirHandle.getFileHandle(fileName, { create: false });
+    }
+
+    async function loadFromFile() {
+      const fileHandle = await getDataFileHandle();
+      const file = await fileHandle.getFile();
+      const text = await file.text();
+      const json = JSON.parse(text);
+      if (!Array.isArray(json)) {
+        throw new Error("JSON root must be an array.");
+      }
+
+      state.rawRows = json;
+      state.workingRows = normalizeRowsForEdit(state.datasetKey, json);
+      renderTable();
+      const fileName = await resolveTargetFileName();
+      setPreview(fileName, text);
+      setStatus(fileName + " を読み込みました。行数: " + state.workingRows.length);
+    }
+
+    async function loadRawPreview() {
+      const fileHandle = await getDataFileHandle();
+      const file = await fileHandle.getFile();
+      const text = await file.text();
+      const fileName = await resolveTargetFileName();
+      setPreview(fileName, text);
+      setStatus(fileName + " の現在内容を表示しました。");
+    }
+
+    async function saveToFile() {
+      const fileHandle = await getDataFileHandle();
+      const data = denormalizeRowsForSave(state.datasetKey, state.workingRows);
+      const text = JSON.stringify(data, null, 2) + "\n";
+      const writable = await fileHandle.createWritable();
+      await writable.write(text);
+      await writable.close();
+      const fileName = await resolveTargetFileName();
+      setPreview(fileName, text);
+    }
+
+    async function createLocalOverride() {
+      if (!state.dirHandle) throw new Error("先に career-data フォルダを開いてください。");
+      const baseName = schema().file;
+      const localName = toLocalFileName(baseName);
+
+      if (await existsFile(localName)) {
+        setStatus(localName + " はすでに存在します。以後こちらが優先されます。");
+        return;
+      }
+
+      const baseHandle = await state.dirHandle.getFileHandle(baseName, { create: false });
+      const baseFile = await baseHandle.getFile();
+      const text = await baseFile.text();
+
+      const localHandle = await state.dirHandle.getFileHandle(localName, { create: true });
+      const writable = await localHandle.createWritable();
+      await writable.write(text.endsWith("\n") ? text : text + "\n");
+      await writable.close();
+
+      setStatus(localName + " を作成しました。以後、編集・生成は .local.json が優先されます。");
+    }
+
+    async function openCareerDataFolder() {
+      if (!window.showDirectoryPicker) {
+        throw new Error("このブラウザは File System Access API に対応していません。Chrome/Edge を利用してください。");
+      }
+      state.dirHandle = await window.showDirectoryPicker({ mode: "readwrite" });
+      setStatus("フォルダを開きました。データセットを選んで読み込みしてください。");
+    }
+
+    datasetSelect.addEventListener("change", async (e) => {
+      state.datasetKey = e.target.value;
+      if (!state.dirHandle) {
+        state.workingRows = [];
+        renderTable();
+        setStatus("データセットを変更しました。フォルダを開いて読み込みしてください。");
+        return;
+      }
+      try {
+        await loadFromFile();
+      } catch (err) {
+        setStatus("読み込みエラー: " + err.message, true);
+      }
+    });
+
+    openFolderBtn.addEventListener("click", async () => {
+      try {
+        await openCareerDataFolder();
+      } catch (err) {
+        setStatus("フォルダを開けませんでした: " + err.message, true);
+      }
+    });
+
+    loadBtn.addEventListener("click", async () => {
+      try {
+        await loadFromFile();
+      } catch (err) {
+        setStatus("読み込みエラー: " + err.message, true);
+      }
+    });
+
+    previewBtn.addEventListener("click", async () => {
+      try {
+        await loadRawPreview();
+      } catch (err) {
+        setStatus("JSON表示エラー: " + err.message, true);
+      }
+    });
+
+    saveBtn.addEventListener("click", async () => {
+      try {
+        await saveToFile();
+        const fileName = await resolveTargetFileName();
+        setStatus("全体保存しました: " + fileName);
+      } catch (err) {
+        setStatus("保存エラー: " + err.message, true);
+      }
+    });
+
+    makeLocalBtn.addEventListener("click", async () => {
+      try {
+        await createLocalOverride();
+        await loadFromFile();
+      } catch (err) {
+        setStatus(".local.json 作成エラー: " + err.message, true);
+      }
+    });
+
+    addRowBtn.addEventListener("click", async () => {
+      state.workingRows.push(emptyRow());
+      renderTable();
+      setStatus("新規行を追加しました。必要項目を入力して保存してください。");
+    });
+
+    fillDatasetOptions();
+    renderTable();
+    setPreview("未読込", "");
+    setStatus("準備完了。まず『career-data フォルダを開く』を押してください。");
+  </script>
+</body>
+</html>
