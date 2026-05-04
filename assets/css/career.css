@@ -128,12 +128,16 @@
 }
 
 .project-card {
+  display: block;
   background: white;
   border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 20px;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .project-card:hover {
