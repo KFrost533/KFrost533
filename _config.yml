@@ -3,8 +3,8 @@ title: "KFrost - Software/Cloud Engineer"
 description: "AWS運用エンジニア → 開発エンジニアへのキャリアチェンジを目指す"
 author: "KFrost"
 email: ""
-baseurl: "/Kentafrost"
-url: "https://kentafrost.github.io"
+baseurl: "/KFrost533"
+url: "https://KFrost533.github.io"
 
 # Build settings
 markdown: kramdown
@@ -29,7 +29,7 @@ header_pages:
   - blog/index.md
 
 # Social media and links
-github_username: kentafrost
+github_username: KFrost533
 
 # Custom variables
 show_excerpts: true
