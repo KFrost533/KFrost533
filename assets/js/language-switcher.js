@@ -32,7 +32,7 @@ let translations = {
 // Load translations from JSON file (with fallback)
 async function loadTranslations() {
   try {
-    const response = await fetch('/Kentafrost/assets/js/translations/common.json');
+    const response = await fetch('/KFrost533/assets/js/translations/common.json');
     if (response.ok) {
       const loadedTranslations = await response.json();
       translations = { ...translations, ...loadedTranslations };
