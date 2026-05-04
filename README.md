@@ -82,6 +82,6 @@
 
 💡 **"I continue my learning journey through hands-on coding and online courses like Coursera."**
 
-⭐️ From [Kentafrost](https://github.com/KFrost533)
+⭐️ From [KFrost](https://github.com/KFrost533)
 
 </div>

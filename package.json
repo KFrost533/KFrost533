@@ -1,7 +1,7 @@
 {
-  "name": "kentafrost-blog",
+  "name": "KFrost-blog",
   "version": "1.0.0",
-  "description": "Blog generation system for Kentafrost portfolio",
+  "description": "Blog generation system for KFrost portfolio",
   "scripts": {
     "content:menu": "tools\\content-tools-menu.bat",
     "content:status": "node scripts/content-tools-status.js",

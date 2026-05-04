@@ -19,14 +19,14 @@ function checkPath(targetPath, label, kind = 'any') {
 }
 
 function main() {
-  const kentafrostRoot = path.resolve(__dirname, '..');
-  const javaPracticeRoot = path.resolve(kentafrostRoot, '..', 'java-practice');
+  const KFrostRoot = path.resolve(__dirname, '..');
+  const javaPracticeRoot = path.resolve(KFrostRoot, '..', 'java-practice');
   const gradlePath = path.join(javaPracticeRoot, process.platform === 'win32' ? 'gradlew.bat' : 'gradlew');
 
   const checks = [
-    checkPath(kentafrostRoot, 'Kentafrost root', 'dir'),
-    checkPath(path.join(kentafrostRoot, 'doc', 'career-data'), 'career-data directory', 'dir'),
-    checkPath(path.join(kentafrostRoot, 'doc', 'blog'), 'blog source directory', 'dir'),
+    checkPath(KFrostRoot, 'KFrost533 root', 'dir'),
+    checkPath(path.join(KFrostRoot, 'doc', 'career-data'), 'career-data directory', 'dir'),
+    checkPath(path.join(KFrostRoot, 'doc', 'blog'), 'blog source directory', 'dir'),
     checkPath(javaPracticeRoot, 'java-practice root', 'dir'),
     checkPath(gradlePath, 'Gradle launcher', 'file'),
     checkPath(path.join(javaPracticeRoot, 'github_page', 'career', 'career_data_editor.java'), 'Career editor Java source', 'file'),

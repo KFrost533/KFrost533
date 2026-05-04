@@ -9,8 +9,8 @@ if (!mode || !['update', 'editor'].includes(mode)) {
   process.exit(1);
 }
 
-const kentafrostRoot = path.resolve(__dirname, '..');
-const javaPracticeRoot = path.resolve(kentafrostRoot, '..', 'java-practice');
+const KFrostRoot = path.resolve(__dirname, '..');
+const javaPracticeRoot = path.resolve(KFrostRoot, '..', 'java-practice');
 const isWindows = process.platform === 'win32';
 const gradlePath = path.join(javaPracticeRoot, isWindows ? 'gradlew.bat' : 'gradlew');
 const gradleTask = mode === 'update' ? 'runCareerGenerator' : 'runCareerEditor';
@@ -25,7 +25,7 @@ if (!fs.existsSync(gradlePath)) {
 
 const result = spawnSync(
   gradlePath,
-  [gradleTask, '--args', kentafrostRoot],
+  [gradleTask, '--args', KFrostRoot],
   {
     cwd: javaPracticeRoot,
     stdio: 'inherit',
