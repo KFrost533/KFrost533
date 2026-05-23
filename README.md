@@ -36,41 +36,58 @@
 
 ## 🎯 Featured Projects
 
-### App - Study Tracker
-- **Features**: Integration with Google Calendar and Apple Calendar, visualization of study time and content
-- **Tech Stack**: React Native, electron, Google Calendar API
 
-### App - Video Editing Tool
-- **Features**: Cut, crop, combine, apply effects, loop, and remove silent sections from all videos in a folder
-- **Tech Stack**: React Native, electron, ffmpeg
 
-### Web - about Japanese, Japan
-- **Features**: Information about Japanese language and culture, travel tips, and local insights
-- **Tech Stack**: HTML, CSS, JavaScript
-- **Live Site**: [Visit Here](https://about-jp-document-frost.github.io/jp-explanation/)
 
-### Private Use Projects
+## Public
 
-#### 🌐 Web Development Tools
-- **React Web UI**: Frontend for Task Scheduler
-  - **Features**: Create, manage, and toggle tasks on/off
-  - **Tech Stack**: React, Node.js, REST API
+### App
 
-- **File Management System**: Local file management and operations
-  - **Features**: Load all video files from a specified folder, rename video files, play videos, search and organize using tags defined in JSON files
-  - **Tech Stack**: React, Flask, Python
+| App Name                 | Features                                                                 | Tech Stack                                 |
+|--------------------------|--------------------------------------------------------------------------|---------------------------------------------|
+| Study Tracker            | Integration with Google/Apple Calendar, visualization of study time/content | React Native, Electron, Google Calendar API |
+| Video Editing Tool       | Cut, crop, combine, effects, loop, remove silence from all videos in folder | React Native, Electron, ffmpeg              |
+| Personal Finance Manager | Local-first, multi-currency, recurring entries, charts, history log        | Electron, React, SQLite                     |
 
-#### ☁️ AWS Automation Scripts
-- **CloudFormation Templates**: Infrastructure as Code
-- **CI/CD Pipeline**: Automated deployment with GitHub Actions
-- **Tech Stack**: AWS CloudFormation, Python, GitHub Actions
+### Web
+
+| Project Name         | Features                                                                 | Tech Stack                | Live Site                                                        |
+|----------------------|--------------------------------------------------------------------------|---------------------------|------------------------------------------------------------------|
+| about Japanese, Japan| Info about Japanese language/culture, travel tips, local insights         | HTML, CSS, JavaScript     | [Visit Here](https://about-jp-document-frost.github.io/jp-explanation/) |
+
+## Private
+
+### Web
+
+| Project Name           | Features                                                                 | Tech Stack                |
+|------------------------|--------------------------------------------------------------------------|---------------------------|
+| React Web UI           | Frontend for Task Scheduler: create/manage/toggle tasks                  | React, Node.js, REST API  |
+| File Management System | Load, rename, play, search, and organize video files with tag support    | React, Flask, Python      |
+
+### Tools
+
+| Tool Name                | Features/Description                                                    | Tech Stack                |
+|--------------------------|--------------------------------------------------------------------------|---------------------------|
+| CloudFormation Templates | Infrastructure as Code for AWS                                          | AWS CloudFormation        |
+| CI/CD Pipeline           | Automated deployment with GitHub Actions                                | Python, GitHub Actions    |
+
 
 ### Learning
 
-#### ☕ Java Learning Repository
+#### ☕ Java
 - **Theory & Practice**: From Java fundamentals to advanced topics
 - **Projects**: Practical application development
 - **Tech Stack**: Java, Gradle, OOP Design Patterns
+
+#### 🌐 Web Development
+- **Theory & Practice**: From HTML/CSS basics to advanced JavaScript frameworks
+- **Projects**: Building responsive and interactive web applications
+- **Tech Stack**: HTML, CSS, JavaScript, TypeScript, React, Node.js
+
+#### ☁️ Cloud & DevOps
+- **Theory & Practice**: AWS services, infrastructure as code, CI/CD pipelines
+- **Projects**: Automating cloud infrastructure and deployments
+- **Tech Stack**: AWS, CloudFormation, GitHub Actions, Python through works and personal learning
 
 ## 📚 Learning & Growth
 
@@ -81,7 +98,5 @@
 <div align="center">
 
 💡 **"I continue my learning journey through hands-on coding and online courses like Coursera."**
-
-⭐️ From [KFrost](https://github.com/KFrost533)
 
 </div>

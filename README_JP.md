@@ -36,36 +36,38 @@
 
 </div>
 
-## 🎯 Featured Projects
 
-### App - Study Tracker
-- **機能**: Google Calendar, Apple Calendarとの連携、学習時間・学習内容の可視化
-- **技術**: React Native, electron, Google Calendar API
+## 公開 (Public)
 
-### App - Video Editing Tool
-- **機能**: フォルダ内の全動画のカット、クロップ、結合、エフェクト追加、ループ、無音箇所削除
-- **技術**: React Native, electron, ffmpeg
+### App
 
-### Web - about Japanese, Japan
-- **機能**: 日本語や日本文化の情報、旅行のヒント、ローカルな知見を掲載
-- **技術**: HTML, CSS, JavaScript
-- **公開サイト**: [こちらからアクセス](https://about-jp-document-frost.github.io/jp-explanation/)
+| アプリ名                   | 主な機能                                                                 | 技術スタック                                   |
+|----------------------------|--------------------------------------------------------------------------|------------------------------------------------|
+| Study Tracker              | Google/Apple Calendar連携、学習時間・内容の可視化                        | React Native, Electron, Google Calendar API    |
+| Video Editing Tool         | フォルダ内全動画のカット・結合・エフェクト・ループ・無音削除               | React Native, Electron, ffmpeg                 |
+| Personal Finance Manager   | ローカル優先、マルチ通貨、定期記録、グラフ、履歴ログ                      | Electron, React, SQLite                        |
 
-### 個人用プロジェクト
+### Web
 
-#### 🌐 Web開発ツール
-- **React Web UI**: Task Schedulerのフロントエンド
-- **機能**: タスクの作成、管理、有効/無効切り替え
-- **技術**: React, Node.js, REST API
+| プロジェクト名             | 主な機能                                                                 | 技術スタック                | 公開サイト                                                        |
+|----------------------------|--------------------------------------------------------------------------|-----------------------------|-------------------------------------------------------------------|
+| about Japanese, Japan      | 日本語・文化情報、旅行ヒント、ローカル知見                               | HTML, CSS, JavaScript       | [こちら](https://about-jp-document-frost.github.io/jp-explanation/) |
 
-- **File Management System**: ローカルファイルの管理と操作
-- **機能**: フォルダ指定 ⇒ 全動画ファイルを読み込み。動画ファイルの名前変更、動画再生、JSONファイルでファイルごとに定義したタグを利用して検索、整理
-- **技術**: React, Flask, Python
+## 非公開 (Private)
 
-#### ☁️ AWS自動化スクリプト
-- **CloudFormation Templates**: インフラストラクチャのコード化
-- **CI/CD Pipeline**: GitHub Actions による自動デプロイ
-- **技術**: AWS CloudFormation, Python, GitHub Actions
+### Web
+
+| プロジェクト名             | 主な機能                                                                 | 技術スタック                |
+|----------------------------|--------------------------------------------------------------------------|-----------------------------|
+| React Web UI               | タスクスケジューラのフロントエンド（作成・管理・ON/OFF切替）              | React, Node.js, REST API    |
+| File Management System     | 動画ファイルの一括管理・リネーム・再生・タグ検索                          | React, Flask, Python        |
+
+### ツール (Tools)
+
+| ツール名                   | 概要・特徴                                                               | 技術スタック                |
+|----------------------------|--------------------------------------------------------------------------|-----------------------------|
+| CloudFormation Templates   | AWSインフラのコード化                                                    | AWS CloudFormation          |
+| CI/CD Pipeline             | GitHub Actionsによる自動デプロイ                                          | Python, GitHub Actions      |
 
 ### 学習
 
