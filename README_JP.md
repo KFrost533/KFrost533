@@ -76,6 +76,11 @@
 - **プロジェクト**: 実用的なアプリケーション開発
 - **技術**: Java, Gradle, OOP設計パターン
 
+
+## 🏅 Certifications
+
+- [Coursera修了証一覧（My Coursera Certificates）](https://www.coursera.org/user/40c436e0658b75ee37dc41ad8bc4ce04)
+
 ## 📚 Learning & Growth
 
 🔗 **詳細なポートフォリオ**: [GitHub Pages サイト](https://KFrost533.github.io/KFrost533/)で学習ノート、プロジェクト詳細、キャリア情報をご覧いただけます。
@@ -84,7 +89,7 @@
 
 <div align="center">
 
-💡 **"実際にコードを書くことやCourseraのようなオンライン学習を通して、継続的に学んでいます。"**
+💡 **"実際にコードを書くことや[Coursera](https://www.coursera.org/)のようなオンライン学習を通して、継続的に学んでいます。"**
 
 ⭐️ From [Kentafrost](https://github.com/KFrost533)
 

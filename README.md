@@ -89,6 +89,10 @@
 - **Projects**: Automating cloud infrastructure and deployments
 - **Tech Stack**: AWS, CloudFormation, GitHub Actions, Python through works and personal learning
 
+## 🏅 Certifications
+
+- [My Coursera Certificates](https://www.coursera.org/user/40c436e0658b75ee37dc41ad8bc4ce04)
+
 ## 📚 Learning & Growth
 
 🔗 **Detailed Portfolio**: Visit my [GitHub Pages site](https://KFrost533.github.io/KFrost533/) to see learning notes, project details, and career information.
