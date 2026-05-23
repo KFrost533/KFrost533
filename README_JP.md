@@ -7,37 +7,8 @@
 - 💼 ソフトウェア/クラウドエンジニアとして成長を続けています
 - 📚 継続的な学習とベストプラクティスの実装に情熱を注いでいます
 
-## 🛠️ Tech Stack
+## Public
 
-### ☁️ Cloud & DevOps
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![CloudFormation](https://img.shields.io/badge/CloudFormation-%23326ce5.svg?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-%23326ce5.svg?style=for-the-badge&logo=terraform&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
-
-### 💻 Languages & Frameworks
-![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-
-### 🛢️ Databases & Tools
-![Git](https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-0078d4.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-
-## 📈 GitHub Stats
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=KFrost533&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KFrost533&layout=compact&langs_count=7&theme=tokyonight"/>
-
-</div>
-
-
-## 公開 (Public)
 
 ### App
 
@@ -53,7 +24,8 @@
 |----------------------------|--------------------------------------------------------------------------|-----------------------------|-------------------------------------------------------------------|
 | about Japanese, Japan      | 日本語・文化情報、旅行ヒント、ローカル知見                               | HTML, CSS, JavaScript       | [こちら](https://about-jp-document-frost.github.io/jp-explanation/) |
 
-## 非公開 (Private)
+
+## Private
 
 ### Web
 
@@ -77,20 +49,9 @@
 - **技術**: Java, Gradle, OOP設計パターン
 
 
-## 🏅 Certifications
-
-- [Coursera修了証一覧（My Coursera Certificates）](https://www.coursera.org/user/40c436e0658b75ee37dc41ad8bc4ce04)
-
-## 📚 Learning & Growth
-
-🔗 **詳細なポートフォリオ**: [GitHub Pages サイト](https://KFrost533.github.io/KFrost533/)で学習ノート、プロジェクト詳細、キャリア情報をご覧いただけます。
-
----
 
 <div align="center">
 
 💡 **"実際にコードを書くことや[Coursera](https://www.coursera.org/)のようなオンライン学習を通して、継続的に学んでいます。"**
-
-⭐️ From [Kentafrost](https://github.com/KFrost533)
 
 </div>
