@@ -3,7 +3,7 @@ import {
   dataPath,
   futureLearningPlanPath,
   futureWorkRoadmapPath,
-  includeDir,
+  careerDir,
   languageSkillsPath,
   learningDataPath,
   certificationsPath,
@@ -483,8 +483,8 @@ function main(): void {
   const now = new Date();
   const dateText = formatDateForFrontMatter(now);
 
-  if (!fs.existsSync(includeDir)) {
-    fs.mkdirSync(includeDir, { recursive: true });
+  if (!fs.existsSync(careerDir)) {
+    fs.mkdirSync(careerDir, { recursive: true });
   }
 
   const experiences = readJson<Experience[]>(dataPath);
@@ -524,43 +524,43 @@ function main(): void {
   writeFile(outputLanguageBarsJp, renderLanguageBars(languageSkills, 'jp'));
   writeFile(outputLanguageBarsEn, renderLanguageBars(languageSkills, 'en'));
 
-  const certsJpPath = path.join(includeDir, 'certifications-jp.html');
-  const certsEnPath = path.join(includeDir, 'certifications-en.html');
+  const certsJpPath = path.join(careerDir, 'certifications-jp.html');
+  const certsEnPath = path.join(careerDir, 'certifications-en.html');
   writeFile(certsJpPath, renderJpCertifications(certifications));
   writeFile(certsEnPath, renderEnCertifications(certifications));
 
-  const projectsJpPath = path.join(includeDir, 'personal-projects-jp.html');
-  const projectsEnPath = path.join(includeDir, 'personal-projects-en.html');
+  const projectsJpPath = path.join(careerDir, 'personal-projects-jp.html');
+  const projectsEnPath = path.join(careerDir, 'personal-projects-en.html');
   writeFile(projectsJpPath, renderJpPersonalProjects(personalProjects));
   writeFile(projectsEnPath, renderEnPersonalProjects(personalProjects));
 
-  const summaryJpPath = path.join(includeDir, 'career-summary-jp.html');
-  const summaryEnPath = path.join(includeDir, 'career-summary-en.html');
+  const summaryJpPath = path.join(careerDir, 'career-summary-jp.html');
+  const summaryEnPath = path.join(careerDir, 'career-summary-en.html');
   writeFile(summaryJpPath, renderJpCareerSummary(careerSummary));
   writeFile(summaryEnPath, renderEnCareerSummary(careerSummary));
 
-  const certificationsVisualJpPath = path.join(includeDir, 'certifications-visual-jp.html');
-  const certificationsVisualEnPath = path.join(includeDir, 'certifications-visual-en.html');
+  const certificationsVisualJpPath = path.join(careerDir, 'certifications-visual-jp.html');
+  const certificationsVisualEnPath = path.join(careerDir, 'certifications-visual-en.html');
   writeFile(certificationsVisualJpPath, renderCertificationVisual(certifications, 'jp'));
   writeFile(certificationsVisualEnPath, renderCertificationVisual(certifications, 'en'));
 
-  const projectsVisualJpPath = path.join(includeDir, 'projects-visual-jp.html');
-  const projectsVisualEnPath = path.join(includeDir, 'projects-visual-en.html');
+  const projectsVisualJpPath = path.join(careerDir, 'projects-visual-jp.html');
+  const projectsVisualEnPath = path.join(careerDir, 'projects-visual-en.html');
   writeFile(projectsVisualJpPath, renderProjectVisual(personalProjects, 'jp'));
   writeFile(projectsVisualEnPath, renderProjectVisual(personalProjects, 'en'));
 
-  const workTechTypeTableJpPath = path.join(includeDir, 'work-tech-type-table-jp.html');
-  const workTechTypeTableEnPath = path.join(includeDir, 'work-tech-type-table-en.html');
+  const workTechTypeTableJpPath = path.join(careerDir, 'work-tech-type-table-jp.html');
+  const workTechTypeTableEnPath = path.join(careerDir, 'work-tech-type-table-en.html');
   writeFile(workTechTypeTableJpPath, renderWorkTechTypeTable(experiences, 'jp'));
   writeFile(workTechTypeTableEnPath, renderWorkTechTypeTable(experiences, 'en'));
 
-  const workCategoryVisualJpPath = path.join(includeDir, 'work-category-visual-jp.html');
-  const workCategoryVisualEnPath = path.join(includeDir, 'work-category-visual-en.html');
+  const workCategoryVisualJpPath = path.join(careerDir, 'work-category-visual-jp.html');
+  const workCategoryVisualEnPath = path.join(careerDir, 'work-category-visual-en.html');
   writeFile(workCategoryVisualJpPath, renderWorkCategoryVisual(experiences, 'jp'));
   writeFile(workCategoryVisualEnPath, renderWorkCategoryVisual(experiences, 'en'));
 
-  const workCategoryTableJpPath = path.join(includeDir, 'work-category-table-jp.html');
-  const workCategoryTableEnPath = path.join(includeDir, 'work-category-table-en.html');
+  const workCategoryTableJpPath = path.join(careerDir, 'work-category-table-jp.html');
+  const workCategoryTableEnPath = path.join(careerDir, 'work-category-table-en.html');
   writeFile(workCategoryTableJpPath, renderWorkCategoryTable(experiences, 'jp'));
   writeFile(workCategoryTableEnPath, renderWorkCategoryTable(experiences, 'en'));
 
