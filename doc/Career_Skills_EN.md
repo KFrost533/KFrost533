@@ -1,17 +1,9 @@
----
-layout: default
-title: "Technical Skills & Languages"
-subtitle: "Skills, language proficiency, and notes"
-description: "KFrost technical skills, language skills, and proficiency notes"
-date: 2025-01-01
-last_modified_at: 2026-03-14
-show_toc: true
-permalink: /career/en/skills
----
+{% include doc/_includes/career/header-en.html %}
 
-{% include career/career-nav-en.html active='skills' %}
 
-{% include career/career-page-styles.html %}
+{% include doc/_includes/career/career-nav-en.html active='skills' %}
+
+{% include doc/_includes/career/career-page-styles.html %}
 
 <p class="career-intro">
 This page helps readers quickly understand technology experience, learning areas, and working language capability.
@@ -38,23 +30,23 @@ This page helps readers quickly understand technology experience, learning areas
 
 ### Experience by Category
 
-{% include career/work-category-visual-en.html %}
+{% include doc/_includes/career/work-category-visual-en.html %}
 
-{% include career/work-category-table-en.html %}
+{% include doc/_includes/career/work-category-table-en.html %}
 
 ---
 
 ### Experience Visualization (Top)
 
-{% include career/technology-bars-en.html %}
+{% include doc/_includes/career/technology-bars-en.html %}
 
 ---
 
-{% include career/technology-totals-en.md %}
+{% include doc/_includes/career/technology-totals-en.html %}
 
 ### Technology Category Summary
 
-{% include career/technology-summary-en.html %}
+{% include doc/_includes/career/technology-summary-en.html %}
 
 ---
 
@@ -62,11 +54,11 @@ This page helps readers quickly understand technology experience, learning areas
 
 ### Language Level Visualization
 
-{% include career/language-bars-en.html %}
+{% include doc/_includes/career/language-bars-en.html %}
 
 ---
 
-{% include career/language-skills-en.md %}
+{% include doc/_includes/career/language-skills-en.html %}
 
 ---
 
@@ -75,3 +67,7 @@ This page helps readers quickly understand technology experience, learning areas
 <div class="skills-note">
 Star rating guide: ★4 (3+ years) / ★3 (2+ years) / ★2 (1+ year) / ★1 (under 1 year or learning)
 </div>
+
+---
+
+{% include doc/_includes/career/footer-en.html %}

@@ -1,21 +1,11 @@
----
-layout: default
-title: "キャリアサマリー・職歴"
-subtitle: "AWS運用エンジニア → 開発エンジニアへのキャリアチェンジを目指す"
-description: "KFrostのキャリアサマリーと職歴詳細"
-date: 2025-01-01
-last_modified_at: 2026-04-28
-show_toc: true
-permalink: /career/jp
----
+{% include doc/_includes/career/header-jp.html %}
 
-{% include career/career-nav-jp.html active='overview' %}
 
-{% include career/career-page-styles.html %}
+{% include doc/_includes/career/career-nav-jp.html active='overview' %}
 
-<p class="career-intro">
-AWS運用を軸に積み上げてきた経験と、開発エンジニアへの移行に向けた現在地をまとめています。
-</p>
+{% include doc/_includes/career/career-page-styles.html %}
+
+
 
 <div class="career-glance-grid">
 	<div class="career-glance-card">
@@ -34,13 +24,13 @@ AWS運用を軸に積み上げてきた経験と、開発エンジニアへの�
 
 ## キャリアサマリー
 
-{% include career/career-summary-jp.html %}
+{% include doc/_includes/career/career-summary-jp.html %}
 
 ---
 
 ## 職歴詳細
 
-{% include career/work-experience-jp.html %}
+{% include doc/_includes/career/work-experience-jp.html %}
 
 ---
 
@@ -61,4 +51,4 @@ AWS運用を軸に積み上げてきた経験と、開発エンジニアへの�
 
 ---
 
-*最終更新: 2026年04月28日 | このページは定期的に更新されます*
+{% include doc/_includes/career/footer-jp.html %}

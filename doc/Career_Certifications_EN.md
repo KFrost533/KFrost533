@@ -1,21 +1,11 @@
----
-layout: default
-title: "Certifications & Qualifications"
-subtitle: "Current certifications and how they connect to practical work"
-description: "KFrost certifications, qualifications, and related technology context"
-date: 2025-01-01
-last_modified_at: 2026-03-14
-show_toc: true
-permalink: /career/en/certifications
----
+{% include doc/_includes/career/header-en.html %}
 
-{% include career/career-nav-en.html active='certifications' %}
 
-{% include career/career-page-styles.html %}
+{% include doc/_includes/career/career-nav-en.html active='certifications' %}
 
-<p class="career-intro">
-Certifications are presented together with their relation to operations, practical work, and future technical direction.
-</p>
+{% include doc/_includes/career/career-page-styles.html %}
+
+
 
 <div class="career-glance-grid">
 	<div class="career-glance-card">
@@ -34,14 +24,18 @@ Certifications are presented together with their relation to operations, practic
 
 ## Visual Summary
 
-{% include career/certifications-visual-en.html %}
+{% include doc/_includes/career/certifications-visual-en.html %}
 
 ---
 
-{% include career/certifications-en.html %}
+{% include doc/_includes/career/certifications-en.html %}
 
 ---
 
 <div class="career-note">
 Certifications are used not only as proof of knowledge but also as anchors for selecting future hands-on learning areas.
 </div>
+
+---
+
+{% include doc/_includes/career/footer-en.html %}

@@ -1,46 +1,22 @@
----
-layout: default
-title: "個人開発・スキル拡張 / キャリア目標・学習計画"
-subtitle: "個人開発の取り組みと今後の成長方針"
-description: "KFrostの個人開発、スキル拡張、キャリア目標、学習計画"
-date: 2025-01-01
-last_modified_at: 2026-03-14
-show_toc: true
-permalink: /career/jp/projects-goals
----
+{% include doc/_includes/career/header-jp.html %}
 
-{% include career/career-nav-jp.html active='projects-goals' %}
 
-{% include career/career-page-styles.html %}
+{% include doc/_includes/career/career-nav-jp.html active='projects-goals' %}
 
-<p class="career-intro">
-個人開発で積みたい実装経験と、今後のキャリア目標・学習計画を一つの流れで確認できるページです。
+{% include doc/_includes/career/career-page-styles.html %}
+
+
+<p class="career-intro" style="margin-bottom:2em;">
+個人開発中のプロジェクトと、今後のキャリア目標・学習計画をまとめたページです。
 </p>
 
-<div class="career-glance-grid">
-	<div class="career-glance-card">
-		<p class="career-glance-label">Projects</p>
-		<p class="career-glance-value">個人開発で設計・実装・改善の経験を蓄積</p>
-	</div>
-	<div class="career-glance-card">
-		<p class="career-glance-label">Roadmap</p>
-		<p class="career-glance-value">短期〜中期のキャリア到達イメージを整理</p>
-	</div>
-	<div class="career-glance-card">
-		<p class="career-glance-label">Learning</p>
-		<p class="career-glance-value">次に伸ばす技術分野を優先度付きで整理</p>
-	</div>
-</div>
-
-## 可視化サマリー
-
-{% include career/projects-visual-jp.html %}
-
-{% include career/work-tech-type-table-jp.html %}
+---
 
 ## 個人開発・スキル拡張
 
-{% include career/personal-projects-jp.html %}
+<div style="margin-bottom:2em;">
+{% include doc/_includes/career/personal-projects-jp.html %}
+</div>
 
 ---
 
@@ -48,14 +24,22 @@ permalink: /career/jp/projects-goals
 
 ### 期間別キャリアロードマップ
 
-{% include career/future-work-roadmap-jp.html %}
+<div style="margin-bottom:2em;">
+{% include doc/_includes/career/future-work-roadmap-jp.html %}
+</div>
 
 ### 学習プラン
 
-{% include career/learning-plan-jp.md %}
+<div style="overflow-x:auto; margin-bottom:2em;">
+{% include doc/_includes/career/learning-plan-jp.md %}
+</div>
 
 ---
 
-<div class="career-note">
+<div class="career-note" style="margin-top:2em;">
 個人開発で設計・実装経験を積みながら、将来的には業務でも開発比率を高めていく方針です。
 </div>
+
+---
+
+{% include doc/_includes/career/footer-jp.html %}

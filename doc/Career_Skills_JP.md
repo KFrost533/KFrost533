@@ -1,17 +1,9 @@
----
-layout: default
-title: "技術スキルと言語"
-subtitle: "スキル・語学・習熟度メモ"
-description: "KFrostの技術スキル、言語スキル、習熟度メモ"
-date: 2025-01-01
-last_modified_at: 2026-03-14
-show_toc: true
-permalink: /career/jp/skills
----
+{% include doc/_includes/career/header-jp.html %}
 
-{% include career/career-nav-jp.html active='skills' %}
 
-{% include career/career-page-styles.html %}
+{% include doc/_includes/career/career-nav-jp.html active='skills' %}
+
+{% include doc/_includes/career/career-page-styles.html %}
 
 <p class="career-intro">
 技術スタック全体の経験年数、学習中の領域、言語スキルをひと目で把握できるページです。
@@ -38,23 +30,23 @@ permalink: /career/jp/skills
 
 ### 経験カテゴリ別サマリー
 
-{% include career/work-category-visual-jp.html %}
+{% include doc/_includes/career/work-category-visual-jp.html %}
 
-{% include career/work-category-table-jp.html %}
+{% include doc/_includes/career/work-category-table-jp.html %}
 
 ---
 
 ### 技術経験の可視化（上位）
 
-{% include career/technology-bars-jp.html %}
+{% include doc/_includes/career/technology-bars-jp.html %}
 
 ---
 
-{% include career/technology-totals-jp.md %}
+{% include doc/_includes/career/technology-totals-jp.html %}
 
 ### 技術カテゴリのサマリー
 
-{% include career/technology-summary-jp.html %}
+{% include doc/_includes/career/technology-summary-jp.html %}
 
 ---
 
@@ -62,11 +54,11 @@ permalink: /career/jp/skills
 
 ### 言語レベルの可視化
 
-{% include career/language-bars-jp.html %}
+{% include doc/_includes/career/language-bars-jp.html %}
 
 ---
 
-{% include career/language-skills-jp.md %}
+{% include doc/_includes/career/language-skills-jp.html %}
 
 ---
 
@@ -75,3 +67,7 @@ permalink: /career/jp/skills
 <div class="skills-note">
 星評価の目安: ★4(3年以上) / ★3(2年以上) / ★2(1年以上) / ★1(1年未満・学習中)
 </div>
+
+---
+
+{% include doc/_includes/career/footer-jp.html %}

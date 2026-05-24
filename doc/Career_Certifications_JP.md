@@ -1,21 +1,11 @@
----
-layout: default
-title: "資格・認定"
-subtitle: "保有資格と業務・学習へのつながり"
-description: "KFrostの資格・認定一覧と関連技術の整理"
-date: 2025-01-01
-last_modified_at: 2026-03-14
-show_toc: true
-permalink: /career/jp/certifications
----
+{% include doc/_includes/career/header-jp.html %}
 
-{% include career/career-nav-jp.html active='certifications' %}
 
-{% include career/career-page-styles.html %}
+{% include doc/_includes/career/career-nav-jp.html active='certifications' %}
 
-<p class="career-intro">
-保有資格を単なる一覧ではなく、業務との結びつきや今後の学習テーマと合わせて見られるようにしています。
-</p>
+{% include doc/_includes/career/career-page-styles.html %}
+
+
 
 <div class="career-glance-grid">
 	<div class="career-glance-card">
@@ -34,14 +24,18 @@ permalink: /career/jp/certifications
 
 ## 可視化サマリー
 
-{% include career/certifications-visual-jp.html %}
+{% include doc/_includes/career/certifications-visual-jp.html %}
 
 ---
 
-{% include career/certifications-jp.html %}
+{% include doc/_includes/career/certifications-jp.html %}
 
 ---
 
 <div class="career-note">
 資格は知識の証明としてだけでなく、今後の実務拡張や学習テーマの整理にも活用しています。
 </div>
+
+---
+
+{% include doc/_includes/career/footer-jp.html %}

@@ -1,20 +1,13 @@
----
-layout: default
-title: "Personal Projects / Career Goals & Learning Plan"
-subtitle: "Hands-on growth through projects and structured learning"
-description: "KFrost personal projects, career goals, and learning roadmap"
-date: 2025-01-01
-last_modified_at: 2026-03-14
-show_toc: true
-permalink: /career/en/projects-goals
----
+{% include doc/_includes/career/header-en.html %}
 
-{% include career/career-nav-en.html active='projects-goals' %}
 
-{% include career/career-page-styles.html %}
+
+{% include doc/_includes/career/career-nav-en.html active='projects-goals' %}
+
+{% include doc/_includes/career/career-page-styles.html %}
 
 <p class="career-intro">
-This page connects hands-on personal projects with the longer-term roadmap for development growth.
+	Personal projects and future career goals & learning plan are summarized on this page.
 </p>
 
 <div class="career-glance-grid">
@@ -34,13 +27,13 @@ This page connects hands-on personal projects with the longer-term roadmap for d
 
 ## Visual Summary
 
-{% include career/projects-visual-en.html %}
+{% include doc/_includes/career/projects-visual-en.html %}
 
-{% include career/work-tech-type-table-en.html %}
+{% include doc/_includes/career/work-tech-type-table-en.html %}
 
 ## Personal Projects & Development Growth
 
-{% include career/personal-projects-en.html %}
+{% include doc/_includes/career/personal-projects-en.html %}
 
 ---
 
@@ -48,14 +41,18 @@ This page connects hands-on personal projects with the longer-term roadmap for d
 
 ### Period-Based Career Roadmap
 
-{% include career/future-work-roadmap-en.html %}
+{% include doc/_includes/career/future-work-roadmap-en.html %}
 
 ### Learning Plan
 
-{% include career/learning-plan-en.md %}
+{% include doc/_includes/career/learning-plan-en.html %}
 
 ---
 
 <div class="career-note">
 The goal is to accumulate stronger design and implementation experience through personal projects and gradually increase the development ratio in professional work.
 </div>
+
+---
+
+{% include doc/_includes/career/footer-en.html %}

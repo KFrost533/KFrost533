@@ -1,21 +1,10 @@
----
-layout: default
-title: "Career Summary & Work Experience"
-subtitle: "AWS運用エンジニア → 開発エンジニアへのキャリアチェンジを目指す"
-description: "KFrost career summary and work experience details"
-date: 2025-01-01
-last_modified_at: 2026-04-28
-show_toc: true
-permalink: /career/en
----
+{% include doc/_includes/career/header-en.html %}
 
-{% include career/career-nav-en.html active='overview' %}
 
-{% include career/career-page-styles.html %}
+{% include doc/_includes/career/career-nav-en.html active='overview' %}
 
-<p class="career-intro">
-This page provides a compact view of current positioning, work history, and the transition path from AWS operations to software development.
-</p>
+{% include doc/_includes/career/career-page-styles.html %}
+
 
 <div class="career-glance-grid">
 	<div class="career-glance-card">
@@ -34,13 +23,13 @@ This page provides a compact view of current positioning, work history, and the 
 
 ## Career Summary
 
-{% include career/career-summary-en.html %}
+{% include doc/_includes/career/career-summary-en.html %}
 
 ---
 
 ## Work Experience Details
 
-{% include career/work-experience-en.md %}
+{% include doc/_includes/career/work-experience-en.html %}
 
 ---
 
@@ -62,4 +51,4 @@ Star rating guide: ★4 (3+ years) / ★3 (2+ years) / ★2 (1+ year) / ★1 (un
 
 ---
 
-*Last Updated: 2026-04-28 | This page is updated regularly*
+{% include doc/_includes/career/footer-en.html %}
