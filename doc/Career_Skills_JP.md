@@ -1,4 +1,14 @@
-{% include career/header-jp.html %}
+---
+layout: default
+title: "キャリアスキル・技術経験"
+subtitle: "AWS運用エンジニア → 開発エンジニアへのキャリアチェンジを目指す"
+description: "KFrostのキャリアスキルと技術経験をまとめたページです。"
+date: 2025-01-01
+last_modified_at: 2026-05-24
+show_toc: true
+permalink: /career/skills-jp
+---
+
 
 {% include career/career-nav-jp.html active='skills' %}
 

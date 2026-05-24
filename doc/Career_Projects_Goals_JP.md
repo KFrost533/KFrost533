@@ -1,4 +1,13 @@
-{% include career/header-jp.html %}
+---
+layout: default
+title: "キャリアサマリー・職歴"
+subtitle: "AWS運用エンジニア → 開発エンジニアへのキャリアチェンジを目指す"
+description: "KFrostのキャリアサマリーと職歴詳細"
+date: 2025-01-01
+last_modified_at: 2026-05-24
+show_toc: true
+permalink: /career/projects-goals-jp
+---
 
 
 {% include career/career-nav-jp.html active='projects-goals' %}

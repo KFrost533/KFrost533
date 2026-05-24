@@ -1,4 +1,13 @@
-{% include career/header-en.html %}
+---
+layout: default
+title: "Career Summary & Work History"
+subtitle: "Transitioning from AWS Operations Engineer to Development Engineer"
+description: "KFrost's career summary and detailed work history"
+date: 2025-01-01
+last_modified_at: 2026-05-24
+show_toc: true
+permalink: /career/projects-goals-en
+---
 
 {% include career/career-nav-en.html active='projects-goals' %}
 
