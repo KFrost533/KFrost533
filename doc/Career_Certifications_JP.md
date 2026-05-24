@@ -1,9 +1,9 @@
-{% include ./_includes/career/header-jp.html %}
+{% include career/header-jp.html %}
 
 
-{% include ./_includes/career/career-nav-jp.html active='certifications' %}
+{% include career/career-nav-jp.html active='certifications' %}
 
-{% include ./_includes/career/career-page-styles.html %}
+{% include career/career-page-styles.html %}
 
 
 
@@ -24,11 +24,11 @@
 
 ## 可視化サマリー
 
-{% include ./_includes/career/certifications-visual-jp.html %}
+{% include career/certifications-visual-jp.html %}
 
 ---
 
-{% include ./_includes/career/certifications-jp.html %}
+{% include career/certifications-jp.html %}
 
 ---
 
@@ -38,4 +38,4 @@
 
 ---
 
-{% include ./_includes/career/footer-jp.html %}
+{% include career/footer-jp.html %}

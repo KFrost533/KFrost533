@@ -1,10 +1,8 @@
-{% include ./_includes/career/header-en.html %}
+{% include career/header-en.html %}
 
+{% include career/career-nav-en.html active='projects-goals' %}
 
-
-{% include ./_includes/career/career-nav-en.html active='projects-goals' %}
-
-{% include ./_includes/career/career-page-styles.html %}
+{% include career/career-page-styles.html %}
 
 <p class="career-intro">
 	Personal projects and future career goals & learning plan are summarized on this page.
@@ -27,13 +25,13 @@
 
 ## Visual Summary
 
-{% include ./_includes/career/projects-visual-en.html %}
+{% include career/projects-visual-en.html %}
 
-{% include ./_includes/career/work-tech-type-table-en.html %}
+{% include career/work-tech-type-table-en.html %}
 
 ## Personal Projects & Development Growth
 
-{% include ./_includes/career/personal-projects-en.html %}
+{% include career/personal-projects-en.html %}
 
 ---
 
@@ -41,11 +39,11 @@
 
 ### Period-Based Career Roadmap
 
-{% include ./_includes/career/future-work-roadmap-en.html %}
+{% include career/future-work-roadmap-en.html %}
 
 ### Learning Plan
 
-{% include ./_includes/career/learning-plan-en.html %}
+{% include career/learning-plan-en.html %}
 
 ---
 
@@ -55,4 +53,4 @@ The goal is to accumulate stronger design and implementation experience through 
 
 ---
 
-{% include ./_includes/career/footer-en.html %}
+{% include career/footer-en.html %}

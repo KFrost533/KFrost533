@@ -1,9 +1,9 @@
-{% include ./_includes/career/header-en.html %}
+{% include career/header-en.html %}
 
 
-{% include ./_includes/career/career-nav-en.html active='certifications' %}
+{% include career/career-nav-en.html active='certifications' %}
 
-{% include ./_includes/career/career-page-styles.html %}
+{% include career/career-page-styles.html %}
 
 
 
@@ -24,11 +24,11 @@
 
 ## Visual Summary
 
-{% include ./_includes/career/certifications-visual-en.html %}
+{% include career/certifications-visual-en.html %}
 
 ---
 
-{% include ./_includes/career/certifications-en.html %}
+{% include career/certifications-en.html %}
 
 ---
 
@@ -38,4 +38,4 @@ Certifications are used not only as proof of knowledge but also as anchors for s
 
 ---
 
-{% include ./_includes/career/footer-en.html %}
+{% include career/footer-en.html %}
