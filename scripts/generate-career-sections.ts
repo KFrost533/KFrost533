@@ -564,12 +564,14 @@ function main(): void {
   writeFile(workCategoryTableJpPath, renderWorkCategoryTable(experiences, 'jp'));
   writeFile(workCategoryTableEnPath, renderWorkCategoryTable(experiences, 'en'));
 
-  const careerJpDoc = path.join(rootDir, 'doc', 'Career_JP.md');
-  const careerEnDoc = path.join(rootDir, 'doc', 'Career_EN.md');
+  const careerJpDoc = path.join(rootDir, 'Career_JP.md');
+  const careerEnDoc = path.join(rootDir, 'Career_EN.md');
+
   if (fs.existsSync(careerJpDoc)) {
     updateLastModifiedAt(careerJpDoc, dateText);
     updateFooterLastUpdated(careerJpDoc, 'jp', now);
   }
+  
   if (fs.existsSync(careerEnDoc)) {
     updateLastModifiedAt(careerEnDoc, dateText);
     updateFooterLastUpdated(careerEnDoc, 'en', now);
