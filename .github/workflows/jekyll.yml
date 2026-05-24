@@ -35,12 +35,12 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Generate career sections
-        run: npx --yes tsx scripts/generate-career-sections.ts
+      # - name: Generate career sections
+      #   run: npx --yes tsx scripts/generate-career-sections.ts
 
-      - name: Generate blog pages from md (verbose)
-        id: blog-gen
-        run: npx --yes tsx scripts/generate-blog-pages.ts --verbose
+      # - name: Generate blog pages from md (verbose)
+      #   id: blog-gen
+      #   run: npx --yes tsx scripts/generate-blog-pages.ts --verbose
 
       - name: Setup Pages
         id: pages
