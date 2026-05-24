@@ -42,22 +42,6 @@ jobs:
         id: blog-gen
         run: npx --yes tsx scripts/generate-blog-pages.ts --verbose
 
-      # Display blog generation stats from a JSON file output by the generation script, if it exists
-      - name: Display blog generation stats
-        if: always()
-        run: |
-          if [ -f "blog/generation-stats.json" ]; then
-            STATS=$(cat blog/generation-stats.json)
-            CREATED=$(echo "$STATS" | grep -o '"created": [0-9]*' | grep -o '[0-9]*')
-            UPDATED=$(echo "$STATS" | grep -o '"updated": [0-9]*' | grep -o '[0-9]*')
-            UNCHANGED=$(echo "$STATS" | grep -o '"unchanged": [0-9]*' | grep -o '[0-9]*')
-            DELETED=$(echo "$STATS" | grep -o '"deleted": [0-9]*' | grep -o '[0-9]*')
-            echo "::notice title=Blog Generation Complete::✅ Created: ${CREATED} | ⬆️ Updated: ${UPDATED} | Unchanged: ${UNCHANGED} | Total: $((CREATED + UPDATED + UNCHANGED)) posts"
-            if [ "$DELETED" -gt 0 ]; then
-              echo "::warning title=Deleted Files::🗑️ ${DELETED} blog file(s) were deleted"
-            fi
-          fi
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

@@ -52,8 +52,6 @@ This page helps readers quickly understand technology experience, learning areas
 
 ## Language Skills
 
-### Language Level Visualization
-
 {% include doc/_includes/career/language-bars-en.html %}
 
 ---
