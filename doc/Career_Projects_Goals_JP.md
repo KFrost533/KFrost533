@@ -1,9 +1,9 @@
-{% include doc/_includes/career/header-jp.html %}
+{% include ./_includes/career/header-jp.html %}
 
 
-{% include doc/_includes/career/career-nav-jp.html active='projects-goals' %}
+{% include ./_includes/career/career-nav-jp.html active='projects-goals' %}
 
-{% include doc/_includes/career/career-page-styles.html %}
+{% include ./_includes/career/career-page-styles.html %}
 
 
 <p class="career-intro" style="margin-bottom:2em;">
@@ -15,7 +15,7 @@
 ## 個人開発・スキル拡張
 
 <div style="margin-bottom:2em;">
-{% include doc/_includes/career/personal-projects-jp.html %}
+{% include ./_includes/career/personal-projects-jp.html %}
 </div>
 
 ---
@@ -25,13 +25,13 @@
 ### 期間別キャリアロードマップ
 
 <div style="margin-bottom:2em;">
-{% include doc/_includes/career/future-work-roadmap-jp.html %}
+{% include ./_includes/career/future-work-roadmap-jp.html %}
 </div>
 
 ### 学習プラン
 
 <div style="overflow-x:auto; margin-bottom:2em;">
-{% include doc/_includes/career/learning-plan-jp.md %}
+{% include ./_includes/career/learning-plan-jp.md %}
 </div>
 
 ---
@@ -42,4 +42,4 @@
 
 ---
 
-{% include doc/_includes/career/footer-jp.html %}
+{% include ./_includes/career/footer-jp.html %}

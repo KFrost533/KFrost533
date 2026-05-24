@@ -1,9 +1,9 @@
-{% include doc/_includes/career/header-en.html %}
+{% include ./_includes/career/header-en.html %}
 
 
-{% include doc/_includes/career/career-nav-en.html active='skills' %}
+{% include ./_includes/career/career-nav-en.html active='skills' %}
 
-{% include doc/_includes/career/career-page-styles.html %}
+{% include ./_includes/career/career-page-styles.html %}
 
 <p class="career-intro">
 This page helps readers quickly understand technology experience, learning areas, and working language capability.
@@ -30,33 +30,33 @@ This page helps readers quickly understand technology experience, learning areas
 
 ### Experience by Category
 
-{% include doc/_includes/career/work-category-visual-en.html %}
+{% include ./_includes/career/work-category-visual-en.html %}
 
-{% include doc/_includes/career/work-category-table-en.html %}
+{% include ./_includes/career/work-category-table-en.html %}
 
 ---
 
 ### Experience Visualization (Top)
 
-{% include doc/_includes/career/technology-bars-en.html %}
+{% include ./_includes/career/technology-bars-en.html %}
 
 ---
 
-{% include doc/_includes/career/technology-totals-en.html %}
+{% include ./_includes/career/technology-totals-en.html %}
 
 ### Technology Category Summary
 
-{% include doc/_includes/career/technology-summary-en.html %}
+{% include ./_includes/career/technology-summary-en.html %}
 
 ---
 
 ## Language Skills
 
-{% include doc/_includes/career/language-bars-en.html %}
+{% include ./_includes/career/language-bars-en.html %}
 
 ---
 
-{% include doc/_includes/career/language-skills-en.html %}
+{% include ./_includes/career/language-skills-en.html %}
 
 ---
 
@@ -68,4 +68,4 @@ Star rating guide: ★4 (3+ years) / ★3 (2+ years) / ★2 (1+ year) / ★1 (un
 
 ---
 
-{% include doc/_includes/career/footer-en.html %}
+{% include ./_includes/career/footer-en.html %}

@@ -1,9 +1,9 @@
-{% include doc/_includes/career/header-en.html %}
+{% include ./_includes/career/header-en.html %}
 
 
-{% include doc/_includes/career/career-nav-en.html active='overview' %}
+{% include ./_includes/career/career-nav-en.html active='overview' %}
 
-{% include doc/_includes/career/career-page-styles.html %}
+{% include ./_includes/career/career-page-styles.html %}
 
 
 <div class="career-glance-grid">
@@ -23,13 +23,13 @@
 
 ## Career Summary
 
-{% include doc/_includes/career/career-summary-en.html %}
+{% include ./_includes/career/career-summary-en.html %}
 
 ---
 
 ## Work Experience Details
 
-{% include doc/_includes/career/work-experience-en.html %}
+{% include ./_includes/career/work-experience-en.html %}
 
 ---
 
@@ -51,4 +51,4 @@ Star rating guide: ★4 (3+ years) / ★3 (2+ years) / ★2 (1+ year) / ★1 (un
 
 ---
 
-{% include doc/_includes/career/footer-en.html %}
+{% include ./_includes/career/footer-en.html %}

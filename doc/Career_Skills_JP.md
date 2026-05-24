@@ -1,9 +1,9 @@
-{% include doc/_includes/career/header-jp.html %}
+{% include ./_includes/career/header-jp.html %}
 
 
-{% include doc/_includes/career/career-nav-jp.html active='skills' %}
+{% include ./_includes/career/career-nav-jp.html active='skills' %}
 
-{% include doc/_includes/career/career-page-styles.html %}
+{% include ./_includes/career/career-page-styles.html %}
 
 <p class="career-intro">
 技術スタック全体の経験年数、学習中の領域、言語スキルをひと目で把握できるページです。
@@ -30,23 +30,23 @@
 
 ### 経験カテゴリ別サマリー
 
-{% include doc/_includes/career/work-category-visual-jp.html %}
+{% include ./_includes/career/work-category-visual-jp.html %}
 
-{% include doc/_includes/career/work-category-table-jp.html %}
+{% include ./_includes/career/work-category-table-jp.html %}
 
 ---
 
 ### 技術経験の可視化（上位）
 
-{% include doc/_includes/career/technology-bars-jp.html %}
+{% include ./_includes/career/technology-bars-jp.html %}
 
 ---
 
-{% include doc/_includes/career/technology-totals-jp.html %}
+{% include ./_includes/career/technology-totals-jp.html %}
 
 ### 技術カテゴリのサマリー
 
-{% include doc/_includes/career/technology-summary-jp.html %}
+{% include ./_includes/career/technology-summary-jp.html %}
 
 ---
 
@@ -54,11 +54,11 @@
 
 ### 言語レベルの可視化
 
-{% include doc/_includes/career/language-bars-jp.html %}
+{% include ./_includes/career/language-bars-jp.html %}
 
 ---
 
-{% include doc/_includes/career/language-skills-jp.html %}
+{% include ./_includes/career/language-skills-jp.html %}
 
 ---
 
@@ -70,4 +70,4 @@
 
 ---
 
-{% include doc/_includes/career/footer-jp.html %}
+{% include ./_includes/career/footer-jp.html %}

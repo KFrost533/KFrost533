@@ -1,9 +1,9 @@
-{% include doc/_includes/career/header-jp.html %}
+{% include ./_includes/career/header-jp.html %}
 
 
-{% include doc/_includes/career/career-nav-jp.html active='overview' %}
+{% include ./_includes/career/career-nav-jp.html active='overview' %}
 
-{% include doc/_includes/career/career-page-styles.html %}
+{% include ./_includes/career/career-page-styles.html %}
 
 
 
@@ -24,13 +24,13 @@
 
 ## キャリアサマリー
 
-{% include doc/_includes/career/career-summary-jp.html %}
+{% include ./_includes/career/career-summary-jp.html %}
 
 ---
 
 ## 職歴詳細
 
-{% include doc/_includes/career/work-experience-jp.html %}
+{% include ./_includes/career/work-experience-jp.html %}
 
 ---
 
@@ -51,4 +51,4 @@
 
 ---
 
-{% include doc/_includes/career/footer-jp.html %}
+{% include ./_includes/career/footer-jp.html %}
