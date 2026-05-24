@@ -43,7 +43,7 @@
 
 ### Learning Plan
 
-{% include career/learning-plan-en.html %}
+{% include career/learning-plan-en.md %}
 
 ---
 

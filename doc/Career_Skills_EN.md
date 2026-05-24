@@ -41,7 +41,7 @@ This page helps readers quickly understand technology experience, learning areas
 
 ---
 
-{% include career/technology-totals-en.html %}
+{% include career/technology-totals-en.md %}
 
 ### Technology Category Summary
 
@@ -55,7 +55,7 @@ This page helps readers quickly understand technology experience, learning areas
 
 ---
 
-{% include career/language-skills-en.html %}
+{% include career/language-skills-en.md %}
 
 ---
 

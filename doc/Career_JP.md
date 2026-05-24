@@ -30,7 +30,7 @@
 
 ## 職歴詳細
 
-{% include career/work-experience-jp.html %}
+{% include career/work-experience-jp.md %}
 
 ---
 

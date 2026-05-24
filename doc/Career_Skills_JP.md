@@ -41,7 +41,7 @@
 
 ---
 
-{% include career/technology-totals-jp.html %}
+{% include career/technology-totals-jp.md %}
 
 ### 技術カテゴリのサマリー
 
