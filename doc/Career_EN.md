@@ -27,7 +27,7 @@
 
 ## Work Experience Details
 
-{% include career/work-experience-en.html %}
+{% include career/work-experience-en.md %}
 
 ---
 
