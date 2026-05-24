@@ -1,14 +1,17 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-export const rootDir = path.resolve(__dirname, '../..');
-const careerDataDir = path.join(rootDir, 'doc', 'career-data');
+export const rootDir = path.resolve(__dirname, '../../doc/');
+const careerDataDir = path.join(rootDir, 'career-data');
 
 function resolveCareerDataPath(fileName: string): string {
   const basePath = path.join(careerDataDir, fileName);
   const localOverride = basePath.replace(/\.json$/i, '.local.json');
   return fs.existsSync(localOverride) ? localOverride : basePath;
 }
+
+export const careerJpPath = path.join(rootDir, 'Career_JP.md');
+export const careerEnPath = path.join(rootDir, 'Career_EN.md');
 
 export const dataPath = resolveCareerDataPath('work-experiences.json');
 export const learningDataPath = resolveCareerDataPath('learning-technologies.json');
@@ -44,5 +47,4 @@ export const outputPersonalProjectsJp = path.join(includeDir, 'personal-projects
 export const outputPersonalProjectsEn = path.join(includeDir, 'personal-projects-en.html');
 export const outputCareerSummaryJp = path.join(includeDir, 'career-summary-jp.html');
 export const outputCareerSummaryEn = path.join(includeDir, 'career-summary-en.html');
-export const careerJpPath = path.join(rootDir, 'doc', 'Career_JP.md');
-export const careerEnPath = path.join(rootDir, 'doc', 'Career_EN.md');
+
