@@ -6,7 +6,7 @@ description: "KFrost's career skills and technology experience summarized in one
 date: 2025-01-01
 last_modified_at: 2026-05-24
 show_toc: true
-permalink: /career/certifications-en
+permalink: /career/certifications/en
 ---
 
 

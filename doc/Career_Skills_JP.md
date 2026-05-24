@@ -6,7 +6,7 @@ description: "KFrostのキャリアスキルと技術経験をまとめたペー
 date: 2025-01-01
 last_modified_at: 2026-05-24
 show_toc: true
-permalink: /career/skills-jp
+permalink: /career/skills/jp
 ---
 
 

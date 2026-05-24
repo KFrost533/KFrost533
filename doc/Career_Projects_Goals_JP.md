@@ -6,7 +6,7 @@ description: "KFrostのキャリアサマリーと職歴詳細"
 date: 2025-01-01
 last_modified_at: 2026-05-24
 show_toc: true
-permalink: /career/projects-goals-jp
+permalink: /career/projects-goals/jp
 ---
 
 
