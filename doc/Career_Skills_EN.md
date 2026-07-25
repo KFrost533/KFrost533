@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Career Skills & Technology Experience"
-subtitle: "Transitioning from AWS Operations Engineer to Development Engineer"
-description: "KFrost's career skills and technology experience"
+subtitle: "Technology experience in AWS infrastructure, automation, operations improvement, and OSS validation"
+description: "KFrost's technical experience in cloud infrastructure, development, automation, and operations improvement"
 date: 2025-01-01
-last_modified_at: 2026-05-24
+last_modified_at: 2026-07-25
 show_toc: true
 permalink: /career/skills/en
 ---

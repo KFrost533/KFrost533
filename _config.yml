@@ -1,6 +1,6 @@
 # Jekyll Configuration for GitHub Pages
-title: "KFrost - Software/Cloud Engineer"
-description: "AWS運用エンジニア → 開発エンジニアへのキャリアチェンジを目指す"
+title: "KFrost - Cloud / Software Engineer"
+description: "AWS・Terraform・自動化・OSS検証を軸に、設計・構築・運用改善に取り組むクラウド／ソフトウェアエンジニア"
 author: "KFrost"
 email: ""
 baseurl: "/KFrost533"
@@ -27,8 +27,8 @@ exclude:
 
 # Navigation
 header_pages:
-  - README.md
   - doc/Career_JP.md
+  - doc/Career_EN.md
   - blog/index.md
 
 # Social media and links

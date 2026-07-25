@@ -1,29 +1,43 @@
-### 🛠️ Tier-1 Network Incident Response (May 2022 – Aug 2023)
+### 💻 Cloud Engineer (January 2026 – Present)
 
-| **Duration** | 1 year 4 months |
+| Item | Details |
 |------|------|
-| **Scope** | Network Incident Triage and Response (Aviation Industry, SES) |
-| **Key Technologies** | Network Monitoring (1 year 4 months)<br/>Incident Response (1 year 4 months)<br/>Troubleshooting (1 year 4 months)<br/>Ticket Management (1 year 4 months)<br/>Escalation Handling (1 year 4 months)<br/>Customer Support (1 year 4 months)<br/>Bilingual Support (1 year 4 months) |
-| **Main Achievements** | Network incident triage and response<br/>   Operations monitoring and troubleshooting<br/>   Ping checks and technician dispatch<br/>   Bilingual email communication |
+| **Scope** | AWS environment design and provisioning, configuration management with Terraform, and OSS validation and operational support |
+| **Build & Improvement** | Changed existing release settings and provisioned new resources with Terraform; developed a web-based manual site for users. |
+| **Key Achievements** | Built a GitHub Actions workflow to back up and restore EKS cluster pod data. Migrated the EKS cluster image retrieval path to ECR images and performed validation. Also designed and implemented security improvements. |
+| **Investigation & Support** | Validated overseas identity-management and integration OSS; performed log investigation and debugging; created and reviewed documentation. Supported English-Japanese translation for OSS UI and communication with overseas vendors. |
+| **Key Technologies** | AWS, Terraform, EKS, ECR, GitHub Actions, Docker, Kubernetes, Java, Spring Boot, Wicket, Git/GitHub, Bash, REST API |
 
 <br/>
 
-### ☁️ Cloud Operations Engineer (AWS Focus) (Sep 2023 – Dec 2025)
+### ☁️ AWS Cloud Engineer (July 2024 – December 2025)
 
-| **Duration** | 2 years 4 months |
+| Item | Details |
 |------|------|
-| **Scope** | AWS Environment Operations and Automation |
-| **Key Technologies** | Python (2 years 4 months)<br/>VBA (2 years 4 months)<br/>PowerShell (2 years 4 months)<br/>Linux (6 months)<br/>Windows Server (1 year 6 months)<br/>batch (1 year 6 months)<br/>Github Copilot (1 year)<br/>AWS (2 years 4 months)<br/>EC2 (2 years 4 months)<br/>VPC (1 year 6 months)<br/>IAM (1 year 6 months)<br/>CloudFormation (1 year 6 months)<br/>Lambda (2 years 4 months)<br/>S3 (2 years 4 months)<br/>DynamoDB (1 year 6 months)<br/>SNS (8 months)<br/>EventBridge (8 months)<br/>Systems Manager (8 months)<br/>CloudWatch (1 year 6 months)<br/>Security Hub (1 year)<br/>AWS Health (1 year)<br/>Amazon Bedrock (1 year)<br/>QuickSight (1 month) |
-| **Main Achievements** | VBA document and parameter sheet automation<br/>   QuickSight + Lambda AWS cost calculation system<br/>   CloudFormation management for 20+ AWS services |
+| **Scope** | AWS environment provisioning and operations, monitoring, incident response, and automation with CloudFormation, Lambda, and Python |
+| **Build & Monitoring** | Changed existing release settings and provisioned new resources with CloudFormation. Performed regular monitoring with CloudWatch, Security Hub, and Trusted Advisor, including first-line alert response during night shifts. |
+| **Key Achievements** | Automated a parameter sheet consolidating settings for about 25 AWS resource types. Developed a Python script to aggregate about 360,000 records and a VBA macro for monthly reports. |
+| **Investigation & Improvement** | Created, extended, and tested Lambda-based tools for monitoring and root-cause investigation. Continuously handled incident-log checks, debugging, and specification improvements. |
+| **Key Technologies** | AWS, CloudFormation, Lambda, EC2, VPC, IAM, S3, DynamoDB, SNS, EventBridge, Systems Manager, CloudWatch, Security Hub, Trusted Advisor, Python, VBA, PowerShell |
 
 <br/>
 
-### 💻 OSS Operations and Development Engineer (Jan 2026 – Present)
+### 🛠️ Systems Engineer (October 2023 – May 2024)
 
-| **Duration** | 3 months, Ongoing |
+| Item | Details |
 |------|------|
-| **Scope** | Open Source Operations, Improvement and Validation |
-| **Key Technologies** | Java (2 months)<br/>Springboot(mainly check, some modification) (2 months)<br/>Wicket (2 months)<br/>XML (2 months)<br/>Linux (2 months)<br/>Docker (2 months)<br/>Bash (2 months)<br/>OSS Management (2 months)<br/>AWS (2 months)<br/>Kubernetes (2 months)<br/>Git/GitHub (2 months)<br/>Git Workflow (2 months)<br/>CI/CD (2 months)<br/>DevOps (2 months)<br/>Gradle (2 months)<br/>REST API (2 months)<br/>English to Japanese Translation (2 months)<br/>Japanese to English Translation (2 months)<br/>English Communication (2 months)<br/>Technical Documentation (2 months) |
-| **Main Achievements** | OSS validation and quality assurance<br/>   Technical documentation updates and knowledge sharing<br/>   Code improvements including bug fixes and refactoring |
+| **Scope** | Modification and validation of existing VBA, Lambda, and Batch code; test-environment setup; and data visualization |
+| **Key Achievements** | Built a program from scratch that retrieves Lambda results through the AWS CLI and verifies Lambda completion from a batch process. |
+| **Investigation & Improvement** | Validated Lambda functions for Python specification changes; verified debug logs and implemented error handling. Created and updated operating procedures. |
+| **Key Technologies** | AWS Lambda, AWS Batch, Amazon EC2, AWS CLI, Python, VBA, data visualization |
 
 <br/>
+
+### 📡 Infrastructure Monitoring & Incident Support (May 2022 – October 2023)
+
+| Item | Details |
+|------|------|
+| **Scope** | First-line triage for network and cloud incidents, monitoring-alert response, and coordination with responsible teams |
+| **Operations** | Handled Zabbix alerts through phone and email interviews, first-line triage using ping and log checks, and escalation to the responsible team. |
+| **Key Achievements** | During a network and cloud incident affecting a US enterprise, coordinated status reporting and response with Japanese and US stakeholders within about 30 minutes, resolving the issue without user complaints. |
+| **Key Technologies & Support** | Zabbix, network monitoring, ping, log checks, incident management, Japanese-English email communication, and night-shift incident response |

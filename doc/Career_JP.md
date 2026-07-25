@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "キャリアサマリー・職歴"
-subtitle: "AWS運用エンジニア → 開発エンジニアへのキャリアチェンジを目指す"
-description: "KFrostのキャリアサマリーと職歴詳細"
+subtitle: "AWS・Terraform・自動化・OSS検証を通じて、設計・構築・運用改善に取り組む"
+description: "KFrostのクラウド基盤構築、運用改善、OSS検証に関するキャリアサマリーと職歴詳細"
 date: 2025-01-01
-last_modified_at: 2026-05-24
+last_modified_at: 2026-07-25
 show_toc: true
 permalink: /career/jp
 ---
@@ -19,7 +19,7 @@ permalink: /career/jp
 <div class="career-glance-grid">
 	<div class="career-glance-card">
 		<p class="career-glance-label">Focus</p>
-		<p class="career-glance-value">AWS運用から開発寄りの役割へ段階的に移行中</p>
+		<p class="career-glance-value">AWS運用の経験を基盤に、設計・構築・自動化まで担当</p>
 	</div>
 	<div class="career-glance-card">
 		<p class="career-glance-label">Content</p>
@@ -27,7 +27,7 @@ permalink: /career/jp
 	</div>
 	<div class="career-glance-card">
 		<p class="career-glance-label">Goal</p>
-		<p class="career-glance-value">運用知識を活かせるフルスタック開発へ接続</p>
+		<p class="career-glance-value">クラウド基盤とアプリケーション開発をつなぐエンジニアへ</p>
 	</div>
 </div>
 
@@ -53,9 +53,9 @@ permalink: /career/jp
 
 ### ひとこと
 <div class="career-summary-box">
-・**AWS運用経験2年4か月** -> フルスタック開発エンジニアへの転身  
-・**自動化・効率化** への強いこだわり  
-・**新技術学習** への積極的取り組み
+・**AWSの構築・運用・監視・障害対応**を通じた実務経験<br>
+・**Terraform、CloudFormation、Python、VBA**による自動化と改善<br>
+・**OSS検証・ログ調査・技術文書・英語対応**を含む開発支援
 </div>
 
 ---

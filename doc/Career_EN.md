@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Career Skills & Technology Experience"
-subtitle: "Transitioning from AWS Operations Engineer to Development Engineer"
-description: "KFrost's career skills and technology experience summarized in one page"
+subtitle: "Designing, building, and improving cloud environments through AWS, Terraform, automation, and OSS validation"
+description: "KFrost's career summary covering cloud infrastructure, operations improvement, and OSS validation"
 date: 2025-01-01
-last_modified_at: 2026-05-24
+last_modified_at: 2026-07-25
 show_toc: true
 permalink: /career/en
 ---
@@ -16,7 +16,7 @@ permalink: /career/en
 <div class="career-glance-grid">
 	<div class="career-glance-card">
 		<p class="career-glance-label">Focus</p>
-		<p class="career-glance-value">Moving from AWS operations toward development-focused responsibilities</p>
+		<p class="career-glance-value">Building on AWS operations experience through design, provisioning, and automation</p>
 	</div>
 	<div class="career-glance-card">
 		<p class="career-glance-label">Content</p>
@@ -24,7 +24,7 @@ permalink: /career/en
 	</div>
 	<div class="career-glance-card">
 		<p class="career-glance-label">Goal</p>
-		<p class="career-glance-value">Connect operations knowledge to full-stack engineering work</p>
+		<p class="career-glance-value">Connect cloud infrastructure expertise with application development</p>
 	</div>
 </div>
 
@@ -50,10 +50,9 @@ Star rating guide: ★4 (3+ years) / ★3 (2+ years) / ★2 (1+ year) / ★1 (un
 
 ### Final Thoughts
 <div class="career-summary-box">
-- **2 years 4 months AWS operations experience** -> Transitioning to full-stack development  
-- **Native Japanese speaker** with practical business English communication skills  
-- **Strong in customer support and incident troubleshooting** through hands-on operations experience  
-- **Strong commitment** to automation, efficiency, and continuous learning
+- Practical experience in **AWS provisioning, operations, monitoring, and incident response**<br>
+- Automation and improvement using **Terraform, CloudFormation, Python, and VBA**<br>
+- Development support through **OSS validation, log investigation, technical documentation, and English communication**
 </div>
 
 ---

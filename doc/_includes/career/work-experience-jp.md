@@ -1,118 +1,43 @@
-<!-- 職務1 -->
-<div style="margin-bottom:2em;">
-  <div><b>期間：</b>2022.05〜2023.08（1年4か月）</div>
-  <div><b>職種：</b>🛠️ 障害一次切り分け窓口</div>
-  <div><b>業務内容：</b>ネットワーク障害一次切り分け・インシデント対応（航空業界・SES）</div>
-  <div><b>主な実績：</b><br>
-    ・障害一次切り分け対応<br>
-    ・運用監視、ping確認、技術者派遣<br>
-    ・日英メール対応
-  </div>
-  <div style="margin-top:1em;"><b>使用技術：</b></div>
-  <table style="width:100%; border-collapse:collapse; margin-top:0.5em;">
-    <thead>
-      <tr>
-        <th style="border:1px solid #ddd; padding:6px; width:30%;">カテゴリ</th>
-        <th style="border:1px solid #ddd; padding:6px;">内容</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">ネットワーク・運用</td>
-        <td style="border:1px solid #ddd; padding:6px;">ネットワーク監視（1年4か月）、インシデント対応（1年4か月）、チケット管理（1年4か月）、エスカレーション対応（1年4か月）、バイリンガル対応（1年4か月）</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+### 💻 クラウドエンジニア（2026年1月～現在）
 
-<!-- 職務2 -->
-<div style="margin-bottom:2em;">
-  <div><b>期間：</b>2023.09〜2025.12（2年4か月）</div>
-  <div><b>職種：</b>☁️ クラウドオペレーションエンジニア（AWS中心）</div>
-  <div><b>業務内容：</b>AWS環境運用保守・自動化</div>
-  <div><b>主な実績：</b><br>
-    ・VBAで書類・パラメータシート自動化<br>
-    ・QuickSight+Lambdaでコスト計算システム構築<br>
-    ・CloudFormationで20+サービス構成管理
-  </div>
-  <div style="margin-top:1em;"><b>使用技術：</b></div>
-  <table style="width:100%; border-collapse:collapse; margin-top:0.5em;">
-    <thead>
-      <tr>
-        <th style="border:1px solid #ddd; padding:6px; width:30%;">カテゴリ</th>
-        <th style="border:1px solid #ddd; padding:6px;">内容</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">AI</td>
-        <td style="border:1px solid #ddd; padding:6px;">Amazon Bedrock（1年）、QuickSight（1か月）</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">プログラミング言語</td>
-        <td style="border:1px solid #ddd; padding:6px;">Python（2年4か月）、VBA（2年4か月）、PowerShell（2年4か月）、batch（1年6か月）、YAML（1年6か月）</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">フレームワーク・ツール</td>
-        <td style="border:1px solid #ddd; padding:6px;">Github Copilot（6か月）</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">OS・サーバ</td>
-        <td style="border:1px solid #ddd; padding:6px;">Linux（6か月）、Windows Server（1年6か月）</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">クラウド・インフラ</td>
-        <td style="border:1px solid #ddd; padding:6px;">AWS（2年4か月）、EC2（2年4か月）、VPC（1年6か月）、IAM（1年8か月）、CloudFormation（1年6か月）、Lambda（2年4か月）、S3（2年4か月）、DynamoDB（1年6か月）、SNS（1年6か月）、EventBridge（1年6か月）、Systems Manager（1年6か月）、CloudWatch（2年）、Security Hub（1年）、AWS Health（1年）</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+| 項目 | 内容 |
+|------|------|
+| **担当領域** | AWS環境の設計・構築、Terraformによる構成管理、OSS検証・運用支援 |
+| **構築・改善** | Terraformによる既存リリースの設定変更と新規リソース作成、ユーザー向けWebマニュアルサイトの作成。 |
+| **主な実績** | EKSクラスターポッドのデータをGitHub Actionsからバックアップ／リストアする仕組みを構築。EKSクラスターイメージの取得経路をECRイメージへ移行し、検証を実施。セキュリティ改善の設計書作成・構築も担当。 |
+| **調査・開発支援** | 海外製ID管理・連携OSSの動作確認、ログ調査、デバッグ、資料作成・添削を実施。OSS UIの英日翻訳、海外OSS企業とのメール翻訳・文章作成にも対応。 |
+| **主な技術** | AWS、Terraform、EKS、ECR、GitHub Actions、Docker、Kubernetes、Java、Spring Boot、Wicket、Git／GitHub、Bash、REST API |
 
-<!-- 職務3 -->
-<div style="margin-bottom:2em;">
-  <div><b>期間：</b>2026.01〜現在（4か月・継続中）</div>
-  <div><b>職種：</b>💻 OSS運用・開発エンジニア</div>
-  <div><b>業務内容：</b>オープンソース運用・改善・検証</div>
-  <div><b>主な実績：</b><br>
-    ・OSS動作検証、品質保証、運用改善<br>
-    ・運用ドキュメント整備、知見共有<br>
-    ・コード改善（性能改善・バグ修正・リファクタリング）
-  </div>
-  <div style="margin-top:1em;"><b>使用技術：</b></div>
-  <table style="width:100%; border-collapse:collapse; margin-top:0.5em;">
-    <thead>
-      <tr>
-        <th style="border:1px solid #ddd; padding:6px; width:30%;">カテゴリ</th>
-        <th style="border:1px solid #ddd; padding:6px;">内容</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">AI</td>
-        <td style="border:1px solid #ddd; padding:6px;">Gemini AI（2か月）</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">プログラミング言語</td>
-        <td style="border:1px solid #ddd; padding:6px;">Java（2か月）、Bash（2か月）、XML（2か月）</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">フレームワーク</td>
-        <td style="border:1px solid #ddd; padding:6px;">Springboot（2か月）、Wicket（2か月）</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">クラウド・インフラ</td>
-        <td style="border:1px solid #ddd; padding:6px;">AWS（2か月）、Docker（2か月）、Kubernetes（2か月）</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">CI/CD・開発支援</td>
-        <td style="border:1px solid #ddd; padding:6px;">GitHub（2か月）、Git Workflow（2か月）、CI/CD（2か月）、Github Copilot（2か月）</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #ddd; padding:6px;">その他</td>
-        <td style="border:1px solid #ddd; padding:6px;">OSS（2か月）、English to Japanese Translation（2か月）、Japanese to English Translation（2か月）、English Communication（2か月）、Technical Documentation（2か月）</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-  </tbody>
-</table>
+<br/>
+
+### ☁️ AWSクラウドエンジニア（2024年7月～2025年12月）
+
+| 項目 | 内容 |
+|------|------|
+| **担当領域** | AWS環境の構築・運用、監視、障害対応、CloudFormation・Lambda・Pythonを用いた自動化 |
+| **構築・監視** | CloudFormationによる既存リリースの設定変更・新規リソース作成。CloudWatch、Security Hub、Trusted Advisorを用いた定期監視と、夜間帯を含むアラート一次対応を実施。 |
+| **主な実績** | 約25種類のAWSリソース設定値をまとめるパラメータシートを自動化。約36万件の大容量データを集計するPythonスクリプトと、月次報告資料を作成するVBAマクロを開発。 |
+| **調査・改善** | Lambda関数を中心とした監視・障害原因調査用ツールの作成、機能追加、動作テストを実施。障害ログの確認、デバッグ、仕様改善を継続的に担当。 |
+| **主な技術** | AWS、CloudFormation、Lambda、EC2、VPC、IAM、S3、DynamoDB、SNS、EventBridge、Systems Manager、CloudWatch、Security Hub、Trusted Advisor、Python、VBA、PowerShell |
+
+<br/>
+
+### 🛠️ システムエンジニア（2023年10月～2024年5月）
+
+| 項目 | 内容 |
+|------|------|
+| **担当領域** | VBA、Lambda、Batchの既存コード改修、動作検証、テスト環境構築、データ可視化 |
+| **主な実績** | Lambda処理結果をAWS CLIで取得し、バッチ上でLambdaの正常終了を確認できるプログラムをゼロから構築。 |
+| **調査・改善** | Python仕様変更に伴うLambda関数の検証、デバッグログ確認、エラーハンドリングを実施。手順書の新規作成・既存資料の更新も担当。 |
+| **主な技術** | AWS Lambda、AWS Batch、Amazon EC2、AWS CLI、Python、VBA、データ可視化 |
+
+<br/>
+
+### 📡 インフラ監視・障害対応（2022年5月～2023年10月）
+
+| 項目 | 内容 |
+|------|------|
+| **担当領域** | ネットワーク・クラウド障害の一次切り分け、監視アラート対応、関係部署との連携 |
+| **運用対応** | Zabbixの監視アラートに対し、電話・メールでの障害ヒアリング、pingやログ確認による一次切り分け、対応部署へのエスカレーションを実施。 |
+| **主な実績** | 米国企業のネットワーク・クラウド障害時に、日米企業と主管部署へ約30分で状況を報告・調整し、ユーザークレームなく復旧。 |
+| **主な技術・対応** | Zabbix、ネットワーク監視、ping、ログ確認、インシデント管理、日英メール、夜間帯を含む障害対応 |

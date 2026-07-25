@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "キャリアサマリー・職歴"
-subtitle: "AWS運用エンジニア → 開発エンジニアへのキャリアチェンジを目指す"
-description: "KFrostのキャリアサマリーと職歴詳細"
+title: "個人開発・キャリア目標"
+subtitle: "クラウド基盤と個人開発を通じて、設計・構築・改善の経験を深める"
+description: "KFrostの個人開発、キャリア目標、学習計画"
 date: 2025-01-01
-last_modified_at: 2026-05-24
+last_modified_at: 2026-07-25
 show_toc: true
 permalink: /career/projects-goals/jp
 ---

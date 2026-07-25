@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Career Summary & Work History"
-subtitle: "Transitioning from AWS Operations Engineer to Development Engineer"
-description: "KFrost's career summary and detailed work history"
+title: "Personal Projects & Career Goals"
+subtitle: "Deepening design, delivery, and improvement skills through cloud infrastructure and personal projects"
+description: "KFrost's personal projects, career goals, and learning plan"
 date: 2025-01-01
-last_modified_at: 2026-05-24
+last_modified_at: 2026-07-25
 show_toc: true
 permalink: /career/projects-goals/en
 ---

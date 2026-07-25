@@ -1,7 +1,7 @@
 {
   "name": "KFrost-blog",
   "version": "1.0.0",
-  "description": "Blog generation system for KFrost portfolio",
+  "description": "Portfolio site and content-generation tools for a cloud and software engineer",
   "scripts": {
     "content:menu": "tools\\content-tools-menu.bat",
     "content:status": "node scripts/content-tools-status.js",

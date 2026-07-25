@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "キャリアスキル・技術経験"
-subtitle: "AWS運用エンジニア → 開発エンジニアへのキャリアチェンジを目指す"
-description: "KFrostのキャリアスキルと技術経験をまとめたページです。"
+subtitle: "AWS基盤設計・構築、運用改善、自動化、OSS検証の技術経験"
+description: "KFrostのクラウド基盤、開発、自動化、運用改善に関する技術経験をまとめたページです。"
 date: 2025-01-01
-last_modified_at: 2026-05-24
+last_modified_at: 2026-07-25
 show_toc: true
 permalink: /career/skills/jp
 ---
