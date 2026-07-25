@@ -29,7 +29,7 @@
 ### Web
 
 | Project Name         | Features                                                                 | Tech Stack                | Live Site                                                        | Repository |
-|----------------------|--------------------------------------------------------------------------|---------------------------|------------------------------------------------------------------|----|                                                    | about Japanese, Japan| Info about Japanese language/culture, travel tips, local insights         | HTML, CSS, JavaScript     | [Visit Here](https://about-jp-document-frost.github.io/web-jp-explanation/) | [web-jp-explanation](https://github.com/about-jp-document-frost/web-jp-explanation) |
+|----------------------|--------------------------------------------------------------------------|---------------------------|------------------------------------------------------------------|----|                                                    | about Japanese, Japan| Info about Japanese language/culture, travel tips, local insights         | HTML, CSS, JavaScript     | [Visit Here](https://frost-jp-document.github.io/web-jp-explanation/) | [web-jp-explanation](https://github.com/frost-jp-document/web-jp-explanation) |
 
 ### Learning
 

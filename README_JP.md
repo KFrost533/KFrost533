@@ -29,7 +29,7 @@
 ### Web
 
 | プロジェクト名              | 主な機能                                                                 | 技術スタック                | 公開サイト                                                        | リポジトリ |
-|---------------------------|--------------------------------------------------------------------------|-----------------------------|-------------------------------------------------------------------|----|                                                       | about Japanese, Japan     | 日本語や、教育制度、日本文化などに関する情報、ローカルな知見を提供         | HTML, CSS, JavaScript       | [サイトはこちら](https://about-jp-document-frost.github.io/web-jp-explanation/) | [web-jp-explanation](https://github.com/about-jp-document-frost/web-jp-explanation) |
+|---------------------------|--------------------------------------------------------------------------|-----------------------------|-------------------------------------------------------------------|----|                                                       | about Japanese, Japan     | 日本語や、教育制度、日本文化などに関する情報、ローカルな知見を提供         | HTML, CSS, JavaScript       | [サイトはこちら](https://frost-jp-document.github.io/web-jp-explanation/) | [web-jp-explanation](https://github.com/frost-jp-document/web-jp-explanation) |
 
 ### 学習
 
