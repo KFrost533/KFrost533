@@ -9,12 +9,12 @@
 
 ## 🎯 Career Experience
 
-| Period | Role & Project | Construction & Monitoring | Key Achievements, Debugging & Logging |
+| Period | Role & Project | Responsibilities | Key Achievements |
 |--------|--------|--------|------|
-| 2026/1 – Present | **Cloud Engineer**<br>AWS, Terraform, EKS | • Terraform: Configuration changes, new resource provisioning<br>• AWS environment design & deployment<br>• Manual documentation site development | • EKS cluster backup/restore automation (GitHub Actions)<br>• ECR image migration & validation<br>• OSS validation, debugging, log investigation<br>• OSS UI Japanese translation, technical support with international vendors |
-| 2024/7 – 2025/12 | **AWS Cloud Engineer**<br>CloudFormation, Lambda, Python | • CloudFormation: Resource changes & provisioning<br>• CloudWatch, SecurityHub, TrustedAdvisor monitoring<br>• Lambda functions: development, feature additions, testing<br>• 24/7 incident response including night shifts | • Automated 25 AWS resource parameters (parameter sheet)<br>• Python script for aggregating 360k+ large-scale records (debugging & optimization)<br>• VBA macro for monthly report automation<br>• Incident log analysis & root cause investigation |
-| 2023/10 – 2024/5 | **Systems Engineer**<br>Lambda, Batch, VBA, EC2 | • VBA, Lambda, Batch: code refactoring & validation<br>• Documentation & design specs<br>• Test environment setup (Amazon EC2)<br>• Data visualization tool development | • Built Lambda result retrieval program from scratch using AWS CLI for batch validation<br>• Lambda function validation for Python version changes<br>• Debug logging verification, error handling implementation |
-| 2022/5 – 2023/10 | **Infrastructure Monitoring & Support**<br>Zabbix, CloudWatch, Network | • Periodic Zabbix alert monitoring<br>• Incident triage via phone/email<br>• Primary troubleshooting (ping, log checks, etc.) | • International incident response: US enterprise cloud/network failure resolved in 30 minutes<br>• English email support, technical coordination with global partners<br>• Internal incident documentation & information sharing<br>• On-call night shift incident response & rapid resolution |
+| 2026/1 – Present | **Cloud Engineer**<br>AWS, Terraform, EKS | Terraform, AWS design and deployment, documentation | EKS backup/restore automation, ECR migration, OSS validation, interpretation and translation |
+| 2024/7 – 2025/12 | **AWS Cloud Engineer**<br>CloudFormation, Lambda, Python | CloudFormation, AWS monitoring, Lambda development, incident response | Automated 25 AWS parameters, optimized 360k+ record processing, VBA report automation |
+| 2023/10 – 2024/5 | **Systems Engineer**<br>Lambda, Batch, VBA, EC2 | Refactoring, testing, technical documentation, data visualization | Built an AWS CLI validation tool, verified Python upgrades, improved error handling |
+| 2022/5 – 2023/10 | **Infrastructure Monitoring & Support**<br>Zabbix, CloudWatch, Network | Alert monitoring, incident triage, primary troubleshooting | Resolved a US cloud/network incident in 30 minutes, supported global partners |
 
 ## Public
 
@@ -28,8 +28,9 @@
 
 ### Web
 
-| Project Name         | Features                                                                 | Tech Stack                | Live Site                                                        | Repository |
-|----------------------|--------------------------------------------------------------------------|---------------------------|------------------------------------------------------------------|----|                                                    | about Japanese, Japan| Info about Japanese language/culture, travel tips, local insights         | HTML, CSS, JavaScript     | [Visit Here](https://frost-jp-document.github.io/web-jp-explanation/) | [web-jp-explanation](https://github.com/frost-jp-document/web-jp-explanation) |
+| Project Name              | Features                                                  | Tech Stack            | Live Site                                                                 | Repository |
+|---------------------------|-----------------------------------------------------------|-----------------------|---------------------------------------------------------------------------|------------|
+| About Japanese, Japan     | Info about Japanese language/culture, travel tips, local insights | HTML, CSS, JavaScript | [Visit Here](https://frost-jp-document.github.io/web-jp-explanation/) | [web-jp-explanation](https://github.com/frost-jp-document/web-jp-explanation) |
 
 ### Learning
 
@@ -42,20 +43,11 @@
 
 ## 💻 Skills
 
-### Languages
-- **JavaScript/TypeScript** — Frontend and backend development with React, Node.js
-- **Java** — OOP design patterns, Gradle build automation
-- **Python** — Scripting, data processing, Flask backend development
-
-### Frameworks & Libraries
-- **Frontend**: React, React Native, Electron
-- **Backend**: Node.js, Flask
-- **Tools & Others**: FFmpeg, AWS CloudFormation
-
-### Cloud & DevOps
-- **AWS** — Automation, Infrastructure as Code
-- **CI/CD** — GitHub Actions pipeline orchestration
-- **Databases** — SQLite and relational database management
+| Category                | Skills |
+|-------------------------|--------|
+| Languages               | **JavaScript/TypeScript** — Frontend and backend development with React, Node.js<br>**Java** — OOP design patterns, Gradle build automation<br>**Python** — Scripting, data processing, Flask backend development |
+| Frameworks & Libraries  | **Frontend**: React, React Native, Electron<br>**Backend**: Node.js, Flask<br>**Tools & Others**: FFmpeg, AWS CloudFormation |
+| Cloud & DevOps          | **AWS** — Automation, Infrastructure as Code<br>**CI/CD** — GitHub Actions pipeline orchestration<br>**Databases** — SQLite and relational database management |
 
 ---
 
