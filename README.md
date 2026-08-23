@@ -22,9 +22,13 @@
 
 | App Name                 | Features                                                                 | Tech Stack                                 | Repository |
 |--------------------------|--------------------------------------------------------------------------|---------------------------------------------|----|
-| Study Tracker            | Integration with Google/Apple Calendar, visualization of study time/content | React Native, Electron, Google Calendar API | [app-language-learning](https://github.com/KFrost533/app-language-learning) |
-| VideoEditing            | Local-first desktop video editor: crop, cut, paste, remove segments, and export using FFmpeg | Electron, React, FFmpeg | [app-video-editing](https://github.com/KFrost533/app-video-editing) |
-| Personal Finance Manager | Local-first, multi-currency, recurring entries, charts, history log        | Electron, React, SQLite                     | [app-money-management](https://github.com/frost-house-ledger/app-money-management) |
+| House Ledger System      | Privacy-first, local-only, ad-free, open source                  | React, JavaScript, Electron                 | [frost-house-ledger](https://github.com/frost-house-ledger) |
+| Language Learning AI     | Anki-style language learning AI                                  | React, Electron, FastAPI, JavaScript, Ollama | [frost-language-learning-ai](https://github.com/frost-language-learning-ai) |
+| Secure Memo App          | Local-first, cloud-free, ad-free, open source                    | React, Electron, JavaScript                 | [frost-secure-memo](https://github.com/frost-secure-memo) |
+| Shadowing Learning App   | Local-first, cloud-free, ad-free, open source                    | React, Electron, JavaScript                 | [frost-shadowing](https://github.com/frost-shadowing) |
+| Study Tracker App        | Local-first, cloud-free, ad-free, open source                    | React, Electron, JavaScript                 | [frost-study-tracker](https://github.com/frost-study-tracker) |
+| Video Editing OSS        | Local-first, cloud-free, ad-free, open source                    | React, Electron, JavaScript                 | [frost-video-editing](https://github.com/frost-video-editing) |
+| Video Editing Toolkit OSS | Local-first, cloud-free, ad-free, open source                   | React, Electron, JavaScript                 | [frost-video-editing-toolkit](https://github.com/frost-video-editing-toolkit) |
 
 ### Web
 

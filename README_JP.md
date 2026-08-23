@@ -22,9 +22,13 @@
 
 | アプリ名                 | 主な機能                                                                 | 技術スタック                                   | リポジトリ |
 |--------------------------|--------------------------------------------------------------------------|------------------------------------------------|----|
-| Study Tracker            | Google/Apple カレンダー連携、学習時間・内容の可視化                      | React Native, Electron, Google Calendar API    | [app-language-learning](https://github.com/KFrost533/app-language-learning) |
-| VideoEditing            | ローカルで動作する動画編集アプリ。crop、切り取り、貼り付け、部分削除、FFmpeg を使った動画出力などの編集機能を提供 | Electron, React, FFmpeg                         | [app-video-editing](https://github.com/KFrost533/app-video-editing) |
-| Personal Finance Manager | 家計簿アプリ。ローカル優先のマルチ通貨対応、定期記録、グラフ表示、履歴ログ              | Electron, React, SQLite                        | [app-money-management](https://github.com/frost-house-ledger/app-money-management) |
+| House Ledger System       | プライバシー重視、ローカルのみ、広告なし、オープンソース             | React, JavaScript, Electron                    | [frost-house-ledger](https://github.com/frost-house-ledger) |
+| Language Learning AI      | Anki 様式の言語学習 AI                                    | React, Electron, FastAPI, JavaScript, Ollama | [frost-language-learning-ai](https://github.com/frost-language-learning-ai) |
+| Secure Memo App           | ローカル優先、クラウド不要、広告なし、オープンソース             | React, Electron, JavaScript                    | [frost-secure-memo](https://github.com/frost-secure-memo) |
+| Shadowing Learning App    | ローカル優先、クラウド不要、広告なし、オープンソース             | React, Electron, JavaScript                    | [frost-shadowing](https://github.com/frost-shadowing) |
+| Study Tracker App         | ローカル優先、クラウド不要、広告なし、オープンソース             | React, Electron, JavaScript                    | [frost-study-tracker](https://github.com/frost-study-tracker) |
+| Video Editing OSS         | ローカル優先、クラウド不要、広告なし、オープンソース             | React, Electron, JavaScript                    | [frost-video-editing](https://github.com/frost-video-editing) |
+| Video Editing Toolkit OSS | ローカル優先、クラウド不要、広告なし、オープンソース             | React, Electron, JavaScript                    | [frost-video-editing-toolkit](https://github.com/frost-video-editing-toolkit) |
 
 ### Web
 
