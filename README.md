@@ -64,7 +64,7 @@
 <br />
 notes: Refining my portfolio
 
-<br />
+<p />
 
 If you would like to view my full LinkedIn profile, feel free to contact me by email.  
 I prefer to share it directly for privacy reasons.
