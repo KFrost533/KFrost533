@@ -57,8 +57,11 @@
 
 ## 📞 Contact
 
-- **GitHub**: [KFrost533](https://github.com/KFrost533)
-- **This Portfolio**: [KFrost533/KFrost533](https://github.com/KFrost533/KFrost533)
+- **GitHub**: [My account page](https://github.com/KFrost533)
+- **Portfolio**: [My portfolio](https://kfrost533.github.io/KFrost533)
+
+<br />
+notes: Refining my portfolio
 
 ---
 

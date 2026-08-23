@@ -57,8 +57,11 @@
 
 ## 📞 連絡先
 
-- **GitHub**: [KFrost533](https://github.com/KFrost533)
-- **このポートフォリオ**: [KFrost533/KFrost533](https://github.com/KFrost533/KFrost533)
+- **GitHub**: [個人アカウントページ](https://github.com/KFrost533)
+- **Portfolio**: [ポートフォリオ](https://kfrost533.github.io/KFrost533)
+
+<br />
+メモ: ポートフォリオの改善中
 
 <div align="center">
 
