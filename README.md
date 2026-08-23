@@ -30,11 +30,11 @@
 | Video Editing OSS        | Local-first, cloud-free, ad-free, open source                    | React, Electron, JavaScript                 | [frost-video-editing](https://github.com/frost-video-editing) |
 | Video Editing Toolkit OSS | Local-first, cloud-free, ad-free, open source                   | React, Electron, JavaScript                 | [frost-video-editing-toolkit](https://github.com/frost-video-editing-toolkit) |
 
-### Web
+<!-- ### Web
 
 | Project Name              | Features                                                  | Tech Stack            | Live Site                                                                 | Repository |
 |---------------------------|-----------------------------------------------------------|-----------------------|---------------------------------------------------------------------------|------------|
-| About Japanese, Japan     | Info about Japanese language/culture, travel tips, local insights | HTML, CSS, JavaScript | [Visit Here](https://frost-jp-document.github.io/web-jp-explanation/) | [web-jp-explanation](https://github.com/frost-jp-document/web-jp-explanation) |
+| About Japanese, Japan     | Info about Japanese language/culture, travel tips, local insights | HTML, CSS, JavaScript | [Visit Here](https://frost-jp-document.github.io/web-jp-explanation/) | [web-jp-explanation](https://github.com/frost-jp-document/web-jp-explanation) | -->
 
 ### Learning
 
