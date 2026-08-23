@@ -9,9 +9,8 @@ show_toc: true
 permalink: /career/en
 ---
 
-{% include career/career-nav-en.html active='overview' %}
-
-{% include career/career-page-styles.html %}
+<div data-career-section="nav"></div>
+<div data-career-section="styles"></div>
 
 <div class="career-glance-grid">
 	<div class="career-glance-card">
@@ -30,13 +29,13 @@ permalink: /career/en
 
 ## Career Summary
 
-{% include career/career-summary-en.html %}
+<div data-career-section="summary"></div>
 
 ---
 
 ## Work Experience Details
 
-{% include career/work-experience-en.md %}
+<div data-career-section="work"></div>
 
 ---
 
@@ -57,4 +56,5 @@ Star rating guide: ★4 (3+ years) / ★3 (2+ years) / ★2 (1+ year) / ★1 (un
 
 ---
 
-{% include career/footer-en.html %}
+<script src="{{ '/assets/js/career-sections-en.js' | relative_url }}"></script>
+<div data-career-section="footer"></div>

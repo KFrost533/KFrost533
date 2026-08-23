@@ -10,9 +10,8 @@ permalink: /career/certifications/jp
 ---
 
 
-{% include career/career-nav-jp.html active='certifications' %}
-
-{% include career/career-page-styles.html %}
+<div data-career-section="nav"></div>
+<div data-career-section="styles"></div>
 
 
 
@@ -33,11 +32,11 @@ permalink: /career/certifications/jp
 
 ## 可視化サマリー
 
-{% include career/certifications-visual-jp.html %}
+<div data-career-section="certificationsVisual"></div>
 
 ---
 
-{% include career/certifications-jp.html %}
+<div data-career-section="certifications"></div>
 
 ---
 
@@ -47,4 +46,5 @@ permalink: /career/certifications/jp
 
 ---
 
-{% include career/footer-jp.html %}
+<script src="{{ '/assets/js/career-sections-jp.js' | relative_url }}"></script>
+<div data-career-section="footer"></div>

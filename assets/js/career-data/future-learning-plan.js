@@ -1,4 +1,5 @@
-[
+// Career data sector: future-learning-plan
+module.exports = [
   {
     "priorityJp": "最優先 (2026年内)",
     "priorityEn": "Highest Priority (2026)",
@@ -131,4 +132,4 @@
     "purposeJp": "ブロックチェーン・分散システム・API",
     "purposeEn": "Blockchain, distributed systems, and advanced APIs"
   }
-]
+];

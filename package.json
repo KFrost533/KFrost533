@@ -5,7 +5,7 @@
   "scripts": {
     "content:menu": "tools\\content-tools-menu.bat",
     "content:status": "node scripts/content-tools-status.js",
-    "career:editor": "node scripts/run-career-java.js editor",
+    "career:editor": "node tools/career-editor/server.js",
     "career:update": "ts-node scripts/generate-career-sections.ts",
     "blog:generate": "node scripts/run-blog-java.js generate",
     "blog:generate:verbose": "node scripts/run-blog-java.js verbose",

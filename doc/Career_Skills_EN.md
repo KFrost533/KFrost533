@@ -9,9 +9,8 @@ show_toc: true
 permalink: /career/skills/en
 ---
 
-{% include career/career-nav-en.html active='skills' %}
-
-{% include career/career-page-styles.html %}
+<div data-career-section="nav"></div>
+<div data-career-section="styles"></div>
 
 <p class="career-intro">
 This page helps readers quickly understand technology experience, learning areas, and working language capability.
@@ -38,33 +37,33 @@ This page helps readers quickly understand technology experience, learning areas
 
 ### Experience by Category
 
-{% include career/work-category-visual-en.html %}
+<div data-career-section="categoryVisual"></div>
 
-{% include career/work-category-table-en.html %}
+<div data-career-section="categoryTable"></div>
 
 ---
 
 ### Experience Visualization (Top)
 
-{% include career/technology-bars-en.html %}
+<div data-career-section="technologyBars"></div>
 
 ---
 
-{% include career/technology-totals-en.md %}
+<div data-career-section="technologyTotals"></div>
 
 ### Technology Category Summary
 
-{% include career/technology-summary-en.html %}
+<div data-career-section="technologySummary"></div>
 
 ---
 
 ## Language Skills
 
-{% include career/language-bars-en.html %}
+<div data-career-section="languageBars"></div>
 
 ---
 
-{% include career/language-skills-en.md %}
+<div data-career-section="languageSkills"></div>
 
 ---
 
@@ -76,4 +75,5 @@ Star rating guide: ★4 (3+ years) / ★3 (2+ years) / ★2 (1+ year) / ★1 (un
 
 ---
 
-{% include career/footer-en.html %}
+<script src="{{ '/assets/js/career-sections-en.js' | relative_url }}"></script>
+<div data-career-section="footer"></div>

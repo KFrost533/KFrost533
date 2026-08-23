@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Career Data Editor</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #d8e3ef; background: #15191d; }
+    body { margin: 0; }
+    header { padding: 20px 24px; background: #101315; color: #fff; }
+    main { width: 100%; max-width: 1600px; box-sizing: border-box; margin: 0 auto; padding: 24px 40px; }
+    select, button, input, textarea { font: inherit; }
+    select, button { padding: 9px 12px; border: 1px solid #41505d; border-radius: 6px; background: #15191d; color: #e8f0f7; }
+    button { cursor: pointer; }
+    button.primary { color: #fff; border-color: #1769aa; background: #1769aa; }
+    .toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 18px; }
+    .toolbar label { font-weight: 600; }
+    #status { min-height: 1.4em; color: #8fc5ef; }
+    .table-wrap { width: 100%; overflow: auto; border: 1px solid #35424e; border-radius: 8px; background: #1b2024; }
+    table { width: max-content; min-width: 100%; border-collapse: collapse; }
+    th, td { min-width: 170px; max-width: 360px; padding: 9px; border-right: 1px solid #35424e; border-bottom: 1px solid #35424e; vertical-align: top; }
+    th { position: sticky; top: 0; z-index: 1; background: #26313a; color: #f0f6fb; text-align: left; white-space: nowrap; }
+    th:first-child, td:first-child { position: sticky; left: 0; z-index: 2; min-width: 56px; width: 56px; background: #20272d; }
+    th:last-child, td:last-child { min-width: 75px; width: 75px; }
+    td input, td textarea { width: 100%; box-sizing: border-box; padding: 7px; border: 1px solid #465562; border-radius: 4px; color: #e8f0f7; background: #15191d; }
+    td textarea { min-height: 72px; resize: vertical; font-family: ui-monospace, monospace; font-size: 12px; }
+    td input[aria-invalid="true"], td textarea[aria-invalid="true"] { border-color: #d76b6b; }
+    .row-number { color: #b4c2ce; font-size: 12px; }
+    .remove { color: #ed8585; padding: 7px; }
+    @media (max-width: 640px) { main { padding: 16px; } th, td { min-width: 150px; } }
+  </style>
+</head>
+<body>
+  <header><strong>Career Data Editor</strong></header>
+  <main>
+    <div class="toolbar">
+      <label for="dataset">セクター</label>
+      <select id="dataset"></select>
+      <button id="reload">再読込</button>
+      <button id="add" class="primary">行を追加</button>
+      <button id="save" class="primary">保存</button>
+    </div>
+    <p id="status" role="status"></p>
+    <section id="rows" aria-live="polite"></section>
+  </main>
+  <script>
+    const dataset = document.querySelector('#dataset');
+    const rows = document.querySelector('#rows');
+    const status = document.querySelector('#status');
+    let currentRows = [];
+
+    async function request(url, options) {
+      const response = await fetch(url, options);
+      const body = await response.json();
+      if (!response.ok) throw new Error(body.error || '通信に失敗しました');
+      return body;
+    }
+
+    function columns() {
+      return [...new Set(currentRows.flatMap((row) => Object.keys(row)))];
+    }
+
+    function valueType(value) {
+      if (Array.isArray(value)) return 'array';
+      if (value !== null && typeof value === 'object') return 'object';
+      return typeof value;
+    }
+
+    function cellValue(value) {
+      if (Array.isArray(value)) return value.join('\n');
+      if (value !== null && typeof value === 'object') return JSON.stringify(value, null, 2);
+      return value === null || value === undefined ? '' : String(value);
+    }
+
+    function updateCell(rowIndex, key, input) {
+      const original = currentRows[rowIndex][key];
+      try {
+        const type = valueType(original);
+        let value = input.value;
+        if (type === 'number') value = Number(value);
+        if (type === 'boolean') value = input.checked;
+        if (type === 'array') value = value.split('\n').filter((entry) => entry.trim() !== '');
+        if (type === 'object') value = JSON.parse(value);
+        currentRows[rowIndex][key] = value;
+        input.removeAttribute('aria-invalid');
+      } catch { input.setAttribute('aria-invalid', 'true'); }
+    }
+
+    function render() {
+      const keys = columns();
+      const table = document.createElement('table');
+      const head = document.createElement('thead');
+      const headRow = document.createElement('tr');
+      headRow.innerHTML = '<th>#</th>' + keys.map((key) => `<th>${key}</th>`).join('') + '<th>操作</th>';
+      head.append(headRow);
+      const body = document.createElement('tbody');
+      currentRows.forEach((row, rowIndex) => {
+        const tr = document.createElement('tr');
+        const number = document.createElement('td');
+        number.innerHTML = `<span class="row-number">${rowIndex + 1}</span>`;
+        tr.append(number);
+        keys.forEach((key) => {
+          const td = document.createElement('td');
+          const value = row[key] === undefined ? '' : row[key];
+          const type = valueType(value);
+          const input = type === 'array' || type === 'object' ? document.createElement('textarea') : document.createElement('input');
+          input.value = cellValue(value);
+          if (type === 'number') input.type = 'number';
+          if (type === 'boolean') { input.type = 'checkbox'; input.checked = value; }
+          input.addEventListener('input', () => updateCell(rowIndex, key, input));
+          td.append(input);
+          tr.append(td);
+        });
+        const actions = document.createElement('td');
+        const remove = document.createElement('button');
+        remove.className = 'remove';
+        remove.textContent = '削除';
+        remove.addEventListener('click', () => { currentRows.splice(rowIndex, 1); render(); });
+        actions.append(remove);
+        tr.append(actions);
+        body.append(tr);
+      });
+      table.append(head, body);
+      const wrapper = document.createElement('div');
+      wrapper.className = 'table-wrap';
+      wrapper.append(table);
+      rows.replaceChildren(wrapper);
+    }
+
+    async function loadDatasets() {
+      const body = await request('/api/datasets');
+      dataset.replaceChildren(...body.datasets.map((name) => new Option(name, name)));
+      await loadRows();
+    }
+
+    async function loadRows() {
+      const body = await request(`/api/data?dataset=${encodeURIComponent(dataset.value)}`);
+      currentRows = body.rows;
+      render();
+      status.textContent = `${dataset.value}: ${currentRows.length}行を読み込みました`;
+    }
+
+    async function saveRows() {
+      const body = await request(`/api/data?dataset=${encodeURIComponent(dataset.value)}`, {
+        method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rows: currentRows })
+      });
+      status.textContent = body.ok ? `${dataset.value} を保存しました` : '保存できませんでした';
+    }
+
+    dataset.addEventListener('change', () => loadRows().catch((error) => { console.error(error); status.textContent = `読み込みエラー: ${error.message}`; }));
+    document.querySelector('#reload').addEventListener('click', () => loadRows().catch((error) => { console.error(error); status.textContent = `読み込みエラー: ${error.message}`; }));
+    document.querySelector('#add').addEventListener('click', () => {
+      const template = currentRows[0] || {};
+      const row = Object.fromEntries(columns().map((key) => {
+        const type = valueType(template[key]);
+        if (type === 'array') return [key, []];
+        if (type === 'object') return [key, {}];
+        if (type === 'number') return [key, 0];
+        if (type === 'boolean') return [key, false];
+        return [key, ''];
+      }));
+      currentRows.push(row);
+      render();
+    });
+    document.querySelector('#save').addEventListener('click', () => saveRows().catch((error) => { console.error(error); status.textContent = `保存エラー: ${error.message}`; }));
+    loadDatasets().catch((error) => { console.error(error); status.textContent = `初期化エラー: ${error.message}`; });
+  </script>
+</body>
+</html>

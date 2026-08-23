@@ -10,9 +10,8 @@ permalink: /career/projects-goals/jp
 ---
 
 
-{% include career/career-nav-jp.html active='projects-goals' %}
-
-{% include career/career-page-styles.html %}
+<div data-career-section="nav"></div>
+<div data-career-section="styles"></div>
 
 
 <p class="career-intro" style="margin-bottom:2em;">
@@ -24,7 +23,7 @@ permalink: /career/projects-goals/jp
 ## 個人開発・スキル拡張
 
 <div style="margin-bottom:2em;">
-{% include career/personal-projects-jp.html %}
+<div data-career-section="projects"></div>
 </div>
 
 ---
@@ -34,13 +33,13 @@ permalink: /career/projects-goals/jp
 ### 期間別キャリアロードマップ
 
 <div style="margin-bottom:2em;">
-{% include career/future-work-roadmap-jp.html %}
+<div data-career-section="roadmap"></div>
 </div>
 
 ### 学習プラン
 
 <div style="overflow-x:auto; margin-bottom:2em;">
-{% include career/learning-plan-jp.md %}
+<div data-career-section="learningPlan"></div>
 </div>
 
 ---
@@ -51,4 +50,5 @@ permalink: /career/projects-goals/jp
 
 ---
 
-{% include career/footer-jp.html %}
+<script src="{{ '/assets/js/career-sections-jp.js' | relative_url }}"></script>
+<div data-career-section="footer"></div>

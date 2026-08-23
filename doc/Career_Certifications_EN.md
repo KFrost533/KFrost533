@@ -10,9 +10,8 @@ permalink: /career/certifications/en
 ---
 
 
-{% include career/career-nav-en.html active='certifications' %}
-
-{% include career/career-page-styles.html %}
+<div data-career-section="nav"></div>
+<div data-career-section="styles"></div>
 
 
 
@@ -33,11 +32,11 @@ permalink: /career/certifications/en
 
 ## Visual Summary
 
-{% include career/certifications-visual-en.html %}
+<div data-career-section="certificationsVisual"></div>
 
 ---
 
-{% include career/certifications-en.html %}
+<div data-career-section="certifications"></div>
 
 ---
 
@@ -47,4 +46,5 @@ Certifications are used not only as proof of knowledge but also as anchors for s
 
 ---
 
-{% include career/footer-en.html %}
+<script src="{{ '/assets/js/career-sections-en.js' | relative_url }}"></script>
+<div data-career-section="footer"></div>

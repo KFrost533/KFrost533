@@ -25,7 +25,7 @@ function main() {
 
   const checks = [
     checkPath(KFrostRoot, 'KFrost533 root', 'dir'),
-    checkPath(path.join(KFrostRoot, 'doc', 'career-data'), 'career-data directory', 'dir'),
+    checkPath(path.join(KFrostRoot, 'assets', 'js', 'career-data'), 'career-data directory', 'dir'),
     checkPath(path.join(KFrostRoot, 'doc', 'blog'), 'blog source directory', 'dir'),
     checkPath(javaPracticeRoot, 'java-practice root', 'dir'),
     checkPath(gradlePath, 'Gradle launcher', 'file'),

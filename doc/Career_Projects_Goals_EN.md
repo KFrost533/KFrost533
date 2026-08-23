@@ -9,9 +9,8 @@ show_toc: true
 permalink: /career/projects-goals/en
 ---
 
-{% include career/career-nav-en.html active='projects-goals' %}
-
-{% include career/career-page-styles.html %}
+<div data-career-section="nav"></div>
+<div data-career-section="styles"></div>
 
 <p class="career-intro">
 	Personal projects and future career goals & learning plan are summarized on this page.
@@ -34,13 +33,13 @@ permalink: /career/projects-goals/en
 
 ## Visual Summary
 
-{% include career/projects-visual-en.html %}
+<div data-career-section="projectsVisual"></div>
 
-{% include career/work-tech-type-table-en.html %}
+<div data-career-section="categoryTable"></div>
 
 ## Personal Projects & Development Growth
 
-{% include career/personal-projects-en.html %}
+<div data-career-section="projects"></div>
 
 ---
 
@@ -48,11 +47,11 @@ permalink: /career/projects-goals/en
 
 ### Period-Based Career Roadmap
 
-{% include career/future-work-roadmap-en.html %}
+<div data-career-section="roadmap"></div>
 
 ### Learning Plan
 
-{% include career/learning-plan-en.md %}
+<div data-career-section="learningPlan"></div>
 
 ---
 
@@ -62,4 +61,5 @@ The goal is to accumulate stronger design and implementation experience through 
 
 ---
 
-{% include career/footer-en.html %}
+<script src="{{ '/assets/js/career-sections-en.js' | relative_url }}"></script>
+<div data-career-section="footer"></div>

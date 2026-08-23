@@ -1,4 +1,5 @@
-[
+// Career data sector: certifications
+module.exports = [
   {
     "categoryJp": "AWS<br/>資格",
     "categoryEn": "AWS<br/>Certifications",
@@ -39,4 +40,4 @@
       }
     ]
   }
-]
+];

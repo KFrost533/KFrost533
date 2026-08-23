@@ -1,4 +1,5 @@
-[
+// Career data sector: career-summary
+module.exports = [
   {
     "keyJp": "専門分野",
     "keyEn": "Specialization",
@@ -35,4 +36,4 @@
       "Aiming for full-stack developer transition"
     ]
   }
-]
+];

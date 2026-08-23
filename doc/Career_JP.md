@@ -10,9 +10,8 @@ permalink: /career/jp
 ---
 
 
-{% include career/career-nav-jp.html active='overview' %}
-
-{% include career/career-page-styles.html %}
+<div data-career-section="nav"></div>
+<div data-career-section="styles"></div>
 
 
 
@@ -33,13 +32,13 @@ permalink: /career/jp
 
 ## キャリアサマリー
 
-{% include career/career-summary-jp.html %}
+<div data-career-section="summary"></div>
 
 ---
 
 ## 職歴詳細
 
-{% include career/work-experience-jp.md %}
+<div data-career-section="work"></div>
 
 ---
 
@@ -60,4 +59,5 @@ permalink: /career/jp
 
 ---
 
-{% include career/footer-jp.html %}
+<script src="{{ '/assets/js/career-sections-jp.js' | relative_url }}"></script>
+<div data-career-section="footer"></div>

@@ -1,14 +1,9 @@
 import * as fs from 'fs';
 import {
-  dataPath,
-  futureLearningPlanPath,
-  futureWorkRoadmapPath,
+  careerDataDir,
   careerDir,
-  languageSkillsPath,
-  learningDataPath,
-  certificationsPath,
-  personalProjectsPath,
-  careerSummaryPath,
+  outputCareerScriptEn,
+  outputCareerScriptJp,
   outputFutureWorkRoadmapEn,
   outputFutureWorkRoadmapJp,
   outputLanguageBarsEn,
@@ -61,10 +56,7 @@ import {
   EXPERIENCE_CATEGORY_ORDER,
   resolveCodingLanguage,
   resolveExperienceCategory,
-  resolveTechnologyCategory,
-  TECH_CATEGORY_LABELS,
   type ExperienceCategory,
-  type TechCategory,
 } from './career/technology-category-mapping';
 import type {
   CareerSummaryItem,
@@ -76,15 +68,50 @@ import type {
   LearningTechnology,
   PersonalProjectItem,
 } from './career/types';
+import { careerStaticIncludes } from './career/static-includes';
 import * as path from 'path';
 
-function readJson<T>(filePath: string): T {
-  return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T;
+function readCareerData(): Record<string, unknown> {
+  const sectors = [
+    'work-experiences',
+    'learning-technologies',
+    'future-learning-plan',
+    'future-work-roadmap',
+    'language-skills',
+    'certifications',
+    'personal-projects',
+    'career-summary',
+  ];
+  return Object.fromEntries(sectors.map((sector) => {
+    const defaultPath = path.join(careerDataDir, `${sector}.js`);
+    const localPath = path.join(careerDataDir, `${sector}.local.js`);
+    const selectedPath = fs.existsSync(localPath) ? localPath : defaultPath;
+    delete require.cache[require.resolve(selectedPath)];
+    return [sector, require(selectedPath)];
+  }));
 }
 
 function writeFile(filePath: string, content: string): void {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   fs.writeFileSync(filePath, content, 'utf8');
+}
+
+function writeCareerScript(filePath: string, sections: Record<string, string>): void {
+  const normalizedSections = {
+    ...sections,
+    nav: sections.nav
+      .replace(/\{% if include\.active == '[^']+' %\}<strong>[^<]*<\/strong>\{% else %\}(<a [\s\S]*?<\/a>)\{% endif %\}/g, '$1')
+      .replace(/\{\{\s*'([^']+)'\s*\|\s*relative_url\s*\}\}/g, '/KFrost533$1'),
+  };
+  const serializedSections = JSON.stringify(normalizedSections);
+  writeFile(
+    filePath,
+    `const careerSections = ${serializedSections};\n` +
+      'document.querySelectorAll("[data-career-section]").forEach((element) => {\n' +
+      '  const section = element.getAttribute("data-career-section");\n' +
+      '  if (section && careerSections[section]) element.innerHTML = careerSections[section];\n' +
+      '});\n'
+  );
 }
 
 function stripHtmlTags(input: string): string {
@@ -487,14 +514,15 @@ function main(): void {
     fs.mkdirSync(careerDir, { recursive: true });
   }
 
-  const experiences = readJson<Experience[]>(dataPath);
-  const learningItems = readJson<LearningTechnology[]>(learningDataPath);
-  const futureLearningPlan = readJson<FutureLearningPlanItem[]>(futureLearningPlanPath);
-  const futureWorkRoadmap = readJson<FutureWorkRoadmapItem[]>(futureWorkRoadmapPath);
-  const languageSkills = readJson<LanguageSkillItem[]>(languageSkillsPath);
-  const certifications = readJson<CertificationGroup[]>(certificationsPath);
-  const personalProjects = readJson<PersonalProjectItem[]>(personalProjectsPath);
-  const careerSummary = readJson<CareerSummaryItem[]>(careerSummaryPath);
+  const careerData = readCareerData();
+  const experiences = careerData['work-experiences'] as Experience[];
+  const learningItems = careerData['learning-technologies'] as LearningTechnology[];
+  const futureLearningPlan = careerData['future-learning-plan'] as FutureLearningPlanItem[];
+  const futureWorkRoadmap = careerData['future-work-roadmap'] as FutureWorkRoadmapItem[];
+  const languageSkills = careerData['language-skills'] as LanguageSkillItem[];
+  const certifications = careerData.certifications as CertificationGroup[];
+  const personalProjects = careerData['personal-projects'] as PersonalProjectItem[];
+  const careerSummary = careerData['career-summary'] as CareerSummaryItem[];
 
   const totals = buildTotals(experiences, now);
   writeFile(outputTotalJp, totals.jp);
@@ -563,6 +591,51 @@ function main(): void {
   const workCategoryTableEnPath = path.join(careerDir, 'work-category-table-en.html');
   writeFile(workCategoryTableJpPath, renderWorkCategoryTable(experiences, 'jp'));
   writeFile(workCategoryTableEnPath, renderWorkCategoryTable(experiences, 'en'));
+
+  writeCareerScript(outputCareerScriptJp, {
+    nav: careerStaticIncludes['career-nav-jp'],
+    styles: careerStaticIncludes['career-page-styles'],
+    footer: careerStaticIncludes['footer-jp'],
+    summary: fs.readFileSync(summaryJpPath, 'utf8'),
+    work: fs.readFileSync(outputWorkJp, 'utf8'),
+    categoryVisual: fs.readFileSync(workCategoryVisualJpPath, 'utf8'),
+    categoryTable: fs.readFileSync(workCategoryTableJpPath, 'utf8'),
+    technologyBars: fs.readFileSync(outputTechBarsJp, 'utf8'),
+    technologyTotals: fs.readFileSync(outputTechTotalsJp, 'utf8'),
+    technologySummary: fs.readFileSync(outputTechSummaryJp, 'utf8'),
+    languageBars: fs.readFileSync(outputLanguageBarsJp, 'utf8'),
+    languageSkills: fs.readFileSync(outputLanguageSkillsJp, 'utf8'),
+    certificationsVisual: fs.readFileSync(certificationsVisualJpPath, 'utf8'),
+    certifications: fs.readFileSync(certsJpPath, 'utf8'),
+    projectsVisual: fs.readFileSync(projectsVisualJpPath, 'utf8'),
+    projects: fs.readFileSync(projectsJpPath, 'utf8'),
+    roadmap: fs.readFileSync(outputFutureWorkRoadmapJp, 'utf8'),
+    learningPlan: fs.readFileSync(outputLearningPlanJp, 'utf8'),
+  });
+  writeCareerScript(outputCareerScriptEn, {
+    nav: careerStaticIncludes['career-nav-en'],
+    styles: careerStaticIncludes['career-page-styles'],
+    footer: careerStaticIncludes['footer-en'],
+    summary: fs.readFileSync(summaryEnPath, 'utf8'),
+    work: fs.readFileSync(outputWorkEn, 'utf8'),
+    categoryVisual: fs.readFileSync(workCategoryVisualEnPath, 'utf8'),
+    categoryTable: fs.readFileSync(workCategoryTableEnPath, 'utf8'),
+    technologyBars: fs.readFileSync(outputTechBarsEn, 'utf8'),
+    technologyTotals: fs.readFileSync(outputTechTotalsEn, 'utf8'),
+    technologySummary: fs.readFileSync(outputTechSummaryEn, 'utf8'),
+    languageBars: fs.readFileSync(outputLanguageBarsEn, 'utf8'),
+    languageSkills: fs.readFileSync(outputLanguageSkillsEn, 'utf8'),
+    certificationsVisual: fs.readFileSync(certificationsVisualEnPath, 'utf8'),
+    certifications: fs.readFileSync(certsEnPath, 'utf8'),
+    projectsVisual: fs.readFileSync(projectsVisualEnPath, 'utf8'),
+    projects: fs.readFileSync(projectsEnPath, 'utf8'),
+    roadmap: fs.readFileSync(outputFutureWorkRoadmapEn, 'utf8'),
+    learningPlan: fs.readFileSync(outputLearningPlanEn, 'utf8'),
+  });
+
+  fs.readdirSync(careerDir).forEach((fileName) => {
+    fs.unlinkSync(path.join(careerDir, fileName));
+  });
 
   const careerJpDoc = path.join(rootDir, 'Career_JP.md');
   const careerEnDoc = path.join(rootDir, 'Career_EN.md');

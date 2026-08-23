@@ -1,4 +1,5 @@
-[
+// Career data sector: future-work-roadmap
+module.exports = [
   {
     "periodJp": "2026年-2027年<br/>(短期目標)",
     "periodEn": "2026-2027<br/>(Short-term Goals)",
@@ -39,4 +40,4 @@
     "metricsJp": "開発チーム<br/>中核メンバー<br/><br/>後輩指導経験",
     "metricsEn": "Core Development<br/>Team Member<br/><br/>Junior Mentoring Experience"
   }
-]
+];
