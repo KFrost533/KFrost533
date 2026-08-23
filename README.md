@@ -14,7 +14,8 @@
 | 2026/1 – Present | **Cloud Engineer**<br>AWS, Terraform, EKS | Terraform, AWS design and deployment, documentation | EKS backup/restore automation, ECR migration, OSS validation, interpretation and translation |
 | 2024/7 – 2025/12 | **AWS Cloud Engineer**<br>CloudFormation, Lambda, Python | CloudFormation, AWS monitoring, Lambda development, incident response | Automated 25 AWS parameters, optimized 360k+ record processing, VBA report automation |
 | 2023/10 – 2024/5 | **Systems Engineer**<br>Lambda, Batch, VBA, EC2 | Refactoring, testing, technical documentation, data visualization | Built an AWS CLI validation tool, verified Python upgrades, improved error handling |
-| 2022/5 – 2023/10 | **Infrastructure Monitoring & Support**<br>Zabbix, CloudWatch, Network | Alert monitoring, incident triage, primary troubleshooting | Resolved a US cloud/network incident in 30 minutes, supported global partners |
+| 2022/5 – 2023/10 | **Infrastructure Incident Triage**<br>Zabbix, Network, Support Center | Phone support, incident triage, primary troubleshooting | Dispatched US cloud/network incidents to relevant departments and supported overseas teams |
+
 
 ## Public
 
