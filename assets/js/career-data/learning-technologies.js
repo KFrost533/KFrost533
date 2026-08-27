@@ -1,46 +1,11 @@
 // Career data sector: learning-technologies
 module.exports = [
   {
-    "jpName": "Bash",
-    "enName": "Bash",
-    "years": 1,
-    "months": 0
-  },
-  {
-    "jpName": "CI/CD",
-    "enName": "CI/CD",
-    "years": 0,
-    "months": 6
-  },
-  {
     "jpName": "GitHub",
-    "enName": "Git/GitHub",
+    "enName": "GitHub",
     "years": 1,
-    "months": 0
-  },
-  {
-    "jpName": "GitHub Actions",
-    "enName": "GitHub Actions",
-    "years": 0,
-    "months": 6
-  },
-  {
-    "jpName": "Docker",
-    "enName": "Docker",
-    "years": 0,
-    "months": 4
-  },
-  {
-    "jpName": "英会話",
-    "enName": "English Communication",
-    "years": 0,
-    "months": 6
-  },
-  {
-    "jpName": "英日翻訳",
-    "enName": "English to Japanese Translation",
-    "years": 2,
-    "months": 0
+    "months": 0,
+    "notes": "workflow, actions(CI/CD)"
   },
   {
     "jpName": "Gemini AI",
@@ -67,51 +32,24 @@ module.exports = [
     "months": 2
   },
   {
-    "jpName": "Kubernetes",
-    "enName": "Kubernetes",
-    "years": 0,
-    "months": 5
-  },
-  {
-    "jpName": "OSS運用",
-    "enName": "OSS Management",
-    "years": 0,
-    "months": 8
-  },
-  {
-    "jpName": "QuickSight",
-    "enName": "QuickSight",
-    "years": 0,
-    "months": 1
-  },
-  {
-    "jpName": "Springboot(確認及び微更新)",
-    "enName": "Springboot(mainly check, some modification)",
-    "years": 0,
-    "months": 3
-  },
-  {
-    "jpName": "XML",
-    "enName": "XML",
-    "years": 0,
-    "months": 9
-  },
-  {
     "jpName": "React",
     "enName": "React",
-    "years": 0,
-    "months": 9
+    "years": 1,
+    "months": 0,
+    "notes": "Used for application development"
   },
   {
     "jpName": "JavaScript",
     "enName": "JavaScript",
     "years": 0,
-    "months": 11
+    "months": 11,
+    "notes": "Used for application development"
   },
   {
     "jpName": "Java",
     "enName": "Java",
     "years": 0,
-    "months": 4
+    "months": 4,
+    "notes": "Used for application development"
   },
 ];

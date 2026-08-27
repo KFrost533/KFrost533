@@ -3,12 +3,14 @@ export type LocalizedExperience = {
   scope: string;
   technologies: TechnologyDuration[];
   achievements: string[];
+  notes?: string[];
 };
 
 export type TechnologyDuration = {
   name: string;
   years: number;
   months: number;
+  notes?: string;
   learning?: boolean;
   certifications?: string[];
 };

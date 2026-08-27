@@ -108,11 +108,13 @@ function toTotalMonths(item: TechnologyDuration): number {
 }
 
 function formatTechJp(item: TechnologyDuration): string {
-  return `${item.name}（${formatDurationJp(toTotalMonths(item))}）`;
+  const notes = item.notes ? `：${item.notes}` : '';
+  return `${item.name}（${formatDurationJp(toTotalMonths(item))}）${notes}`;
 }
 
 function formatTechEn(item: TechnologyDuration): string {
-  return `${item.name} (${formatDurationEn(toTotalMonths(item))})`;
+  const notes = item.notes ? `: ${item.notes}` : '';
+  return `${item.name} (${formatDurationEn(toTotalMonths(item))})${notes}`;
 }
 
 function toStars(totalMonths: number, isLearning: boolean): string {
@@ -525,11 +527,12 @@ export function renderJpWorkTable(experiences: Experience[], now: Date): string 
 
     const tech = exp.jp.technologies.map((item) => formatTechJp(item)).join(' / ');
     const achievements = exp.jp.achievements.map((item) => `・${item}`).join('<br/>\n        ');
+    const notes = (exp.jp.notes ?? []).map((item) => `・${item}`).join('<br/>\n        ');
 
-    return `    <tr>\n      <td style="border:1px solid #ddd; padding:8px;">${periodLabel}<br/>（${durationLabel}${exp.isCurrent ? '・継続中' : ''}）</td>\n      <td style="border:1px solid #ddd; padding:8px;">${exp.jp.role}</td>\n      <td style="border:1px solid #ddd; padding:8px;">${exp.jp.scope}</td>\n      <td style="border:1px solid #ddd; padding:8px;">${tech}</td>\n      <td style="border:1px solid #ddd; padding:8px;">${achievements}</td>\n    </tr>`;
+    return `    <tr>\n      <td style="border:1px solid #ddd; padding:8px;">${periodLabel}<br/>（${durationLabel}${exp.isCurrent ? '・継続中' : ''}）</td>\n      <td style="border:1px solid #ddd; padding:8px;">${exp.jp.role}</td>\n      <td style="border:1px solid #ddd; padding:8px;">${exp.jp.scope}</td>\n      <td style="border:1px solid #ddd; padding:8px;">${tech}</td>\n      <td style="border:1px solid #ddd; padding:8px;">${achievements}</td>\n      <td style="border:1px solid #ddd; padding:8px;">${notes}</td>\n    </tr>`;
   }).join('\n');
 
-  return `<table style="width:100%; border-collapse:collapse;">\n  <thead>\n    <tr>\n      <th align="left" style="width:12%; border:1px solid #ddd; padding:8px;">期間</th>\n      <th align="left" style="width:20%; border:1px solid #ddd; padding:8px;">職種</th>\n      <th align="left" style="width:22%; border:1px solid #ddd; padding:8px;">業務範囲</th>\n      <th align="left" style="width:20%; border:1px solid #ddd; padding:8px;">主要技術</th>\n      <th align="left" style="width:26%; border:1px solid #ddd; padding:8px;">主な実績</th>\n    </tr>\n  </thead>\n  <tbody>\n${rows}\n  </tbody>\n</table>`;
+  return `<table style="width:100%; border-collapse:collapse;">\n  <thead>\n    <tr>\n      <th align="left" style="width:12%; border:1px solid #ddd; padding:8px;">期間</th>\n      <th align="left" style="width:20%; border:1px solid #ddd; padding:8px;">職種</th>\n      <th align="left" style="width:22%; border:1px solid #ddd; padding:8px;">業務範囲</th>\n      <th align="left" style="width:20%; border:1px solid #ddd; padding:8px;">主要技術</th>\n      <th align="left" style="width:20%; border:1px solid #ddd; padding:8px;">主な実績</th>\n      <th align="left" style="width:14%; border:1px solid #ddd; padding:8px;">備考</th>\n    </tr>\n  </thead>\n  <tbody>\n${rows}\n  </tbody>\n</table>`;
 }
 
 export function renderEnWorkSection(experiences: Experience[], now: Date): string {
@@ -544,8 +547,9 @@ export function renderEnWorkSection(experiences: Experience[], now: Date): strin
 
     const tech = exp.en.technologies.map((item) => formatTechEn(item)).join('<br/>');
     const achievements = exp.en.achievements.join('<br/>   ');
+    const notes = (exp.en.notes ?? []).join('<br/>');
 
-    return `### ${exp.en.role} (${periodLabel})\n\n| **Duration** | ${durationLabel}${exp.isCurrent ? ', Ongoing' : ''} |\n|------|------|\n| **Scope** | ${exp.en.scope} |\n| **Key Technologies** | ${tech} |\n| **Main Achievements** | ${achievements} |\n\n<br/>`;
+    return `### ${exp.en.role} (${periodLabel})\n\n| **Duration** | ${durationLabel}${exp.isCurrent ? ', Ongoing' : ''} |\n|------|------|\n| **Scope** | ${exp.en.scope} |\n| **Key Technologies** | ${tech} |\n| **Main Achievements** | ${achievements} |\n| **Notes** | ${notes} |\n\n<br/>`;
   }).join('\n\n');
 }
 

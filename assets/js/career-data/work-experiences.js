@@ -6,86 +6,37 @@ module.exports = [
     "endYm": "2023-08",
     "isCurrent": false,
     "jp": {
-      "role": "🛠️ 障害一次切り分け窓口",
-      "scope": "ネットワーク障害一次切り分け・インシデント対応（航空業界・SES）",
+      "role": "🛠️ ネットワーク障害対応",
+      "scope": "ネットワーク監視・障害一次切り分け（航空業界・SES）",
       "technologies": [
         {
           "name": "ネットワーク監視",
           "years": 1,
-          "months": 4
+          "months": 4,
+          "notes": "チケット管理, エスカレーション対応, インシデント対応"
         },
-        {
-          "name": "インシデント対応",
-          "years": 1,
-          "months": 4
-        },
-        {
-          "name": "チケット管理",
-          "years": 1,
-          "months": 4
-        },
-        {
-          "name": "エスカレーション対応",
-          "years": 1,
-          "months": 4
-        },
-        {
-          "name": "バイリンガル対応",
-          "years": 1,
-          "months": 4
-        }
       ],
       "achievements": [
-        "障害一次切り分け対応",
+        "障害の一次切り分け・復旧対応",
         "運用監視、ping確認、技術者派遣",
         "日英メール対応"
       ]
     },
     "en": {
-      "role": "🛠️ Tier-1 Network Incident Response",
-      "scope": "Network Incident Triage and Response (Aviation Industry, SES)",
+      "role": "🛠️ Network Incident Response",
+      "scope": "Bilingual network monitoring and incident triage (Aviation Industry, SES)",
       "technologies": [
         {
           "name": "Network Monitoring",
           "years": 1,
-          "months": 4
-        },
-        {
-          "name": "Incident Response",
-          "years": 1,
-          "months": 4
-        },
-        {
-          "name": "Troubleshooting",
-          "years": 1,
-          "months": 4
-        },
-        {
-          "name": "Ticket Management",
-          "years": 1,
-          "months": 4
-        },
-        {
-          "name": "Escalation Handling",
-          "years": 1,
-          "months": 4
-        },
-        {
-          "name": "Customer Support",
-          "years": 1,
-          "months": 4
-        },
-        {
-          "name": "Bilingual Support",
-          "years": 1,
-          "months": 4
+           "months": 4,
+           "notes": "Ticket management & escalation & incident response"
         }
       ],
       "achievements": [
-        "Network incident triage and response",
-        "Operations monitoring and troubleshooting",
-        "Ping checks and technician dispatch",
-        "Bilingual email communication"
+        "Incident triage and recovery support",
+        "Monitoring, ping checks, and technician dispatch",
+        "Bilingual email support"
       ]
     }
   },
@@ -95,13 +46,14 @@ module.exports = [
     "endYm": "2025-12",
     "isCurrent": false,
     "jp": {
-      "role": "☁️ クラウドオペレーションエンジニア（AWS中心）",
-      "scope": "AWS環境運用保守・自動化",
+      "role": "☁️ AWSクラウド運用エンジニア",
+      "scope": "AWS環境の運用・自動化",
       "technologies": [
         {
           "name": "Python",
           "years": 2,
-          "months": 4
+          "months": 4,
+          "notes": "boto3, pandas"
         },
         {
           "name": "VBA",
@@ -124,11 +76,6 @@ module.exports = [
           "months": 6
         },
         {
-          "name": "Github Copilot",
-          "years": 0,
-          "months": 6
-        },
-        {
           "name": "Linux",
           "years": 0,
           "months": 6,
@@ -145,103 +92,45 @@ module.exports = [
           "name": "AWS",
           "years": 2,
           "months": 4,
+          "notes":  "development, monitoring and debugging",
+          "service": [
+            "EC2", 
+            "VPC", 
+            "IAM", 
+            "CloudFormation", 
+            "Lambda", 
+            "S3", 
+            "DynamoDB", 
+            "SNS", 
+            "EventBridge", 
+            "Systems Manager", 
+            "CloudWatch", 
+            "Security Hub", 
+            "Amazon Bedrock", 
+            "QuickSight"
+          ],
           "certifications": [
             "AWS Cloud Practitioner",
             "AWS Certified Solutions Architect - Associate",
             "AWS Certified DevOps Engineer - Associate"
           ]
-        },
-        {
-          "name": "EC2",
-          "years": 2,
-          "months": 4
-        },
-        {
-          "name": "VPC",
-          "years": 1,
-          "months": 6
-        },
-        {
-          "name": "IAM",
-          "years": 1,
-          "months": 8
-        },
-        {
-          "name": "CloudFormation",
-          "years": 1,
-          "months": 6
-        },
-        {
-          "name": "Lambda",
-          "years": 2,
-          "months": 4
-        },
-        {
-          "name": "S3",
-          "years": 2,
-          "months": 4
-        },
-        {
-          "name": "DynamoDB",
-          "years": 1,
-          "months": 6
-        },
-        {
-          "name": "SNS",
-          "years": 1,
-          "months": 6
-        },
-        {
-          "name": "EventBridge",
-          "years": 1,
-          "months": 6
-        },
-        {
-          "name": "Systems Manager",
-          "years": 1,
-          "months": 6
-        },
-        {
-          "name": "CloudWatch",
-          "years": 2,
-          "months": 0
-        },
-        {
-          "name": "Security Hub",
-          "years": 1,
-          "months": 0
-        },
-        {
-          "name": "AWS Health",
-          "years": 1,
-          "months": 0
-        },
-        {
-          "name": "Amazon Bedrock",
-          "years": 1,
-          "months": 0
-        },
-        {
-          "name": "QuickSight",
-          "years": 0,
-          "months": 1,
-          "learning": true
         }
       ],
       "achievements": [
-        "VBAで書類・パラメータシート自動化",
-        "QuickSight+Lambdaでコスト計算システム構築",
-        "CloudFormationで20+サービス構成管理"
+        "VBAによる書類・パラメータシート自動化",
+        "QuickSightとLambdaによるコスト計算システム構築",
+        "CloudFormationによるAWSサービス管理"
       ]
     },
     "en": {
-      "role": "☁️ Cloud Operations Engineer (AWS Focus)",
-      "scope": "AWS Environment Operations and Automation",
+      "role": "☁️ AWS Cloud Operations Engineer",
+      "scope": "AWS environment operations and automation",
       "technologies": [
         {
           "name": "Python",
           "years": 2,
-          "months": 4
+          "months": 4,
+          "notes": "boto3, pandas"
         },
         {
           "name": "VBA",
@@ -280,92 +169,33 @@ module.exports = [
           "name": "AWS",
           "years": 2,
           "months": 4,
+          "services": [
+            "EC2", 
+            "VPC", 
+            "IAM", 
+            "CloudFormation", 
+            "Lambda", 
+            "S3", 
+            "DynamoDB", 
+            "SNS", 
+            "EventBridge", 
+            "Systems Manager", 
+            "CloudWatch", 
+            "Security Hub", 
+            "Amazon Bedrock", 
+            "QuickSight"
+          ],
           "certifications": [
             "AWS Cloud Practitioner",
             "AWS Certified Solutions Architect - Associate",
             "AWS Certified DevOps Engineer - Associate"
           ]
-        },
-        {
-          "name": "EC2",
-          "years": 2,
-          "months": 4
-        },
-        {
-          "name": "VPC",
-          "years": 1,
-          "months": 6
-        },
-        {
-          "name": "IAM",
-          "years": 1,
-          "months": 6
-        },
-        {
-          "name": "CloudFormation",
-          "years": 1,
-          "months": 6
-        },
-        {
-          "name": "Lambda",
-          "years": 2,
-          "months": 4
-        },
-        {
-          "name": "S3",
-          "years": 2,
-          "months": 4
-        },
-        {
-          "name": "DynamoDB",
-          "years": 1,
-          "months": 6
-        },
-        {
-          "name": "SNS",
-          "years": 0,
-          "months": 8
-        },
-        {
-          "name": "EventBridge",
-          "years": 0,
-          "months": 8
-        },
-        {
-          "name": "Systems Manager",
-          "years": 0,
-          "months": 8
-        },
-        {
-          "name": "CloudWatch",
-          "years": 1,
-          "months": 6
-        },
-        {
-          "name": "Security Hub",
-          "years": 1,
-          "months": 0
-        },
-        {
-          "name": "AWS Health",
-          "years": 1,
-          "months": 0
-        },
-        {
-          "name": "Amazon Bedrock",
-          "years": 1,
-          "months": 0
-        },
-        {
-          "name": "QuickSight",
-          "years": 0,
-          "months": 1
         }
       ],
       "achievements": [
         "VBA document and parameter sheet automation",
-        "QuickSight + Lambda AWS cost calculation system",
-        "CloudFormation management for 20+ AWS services"
+        "QuickSight and Lambda cost calculation system",
+        "AWS service management with CloudFormation"
       ]
     }
   },
@@ -376,7 +206,7 @@ module.exports = [
     "isCurrent": true,
     "jp": {
       "role": "💻 クラウド・OSSエンジニア",
-      "scope": "AWS環境の設計・構築、Terraformによる構成管理、OSS検証・運用支援",
+      "scope": "AWS設計・構築、OSS検証、日英翻訳・通訳",
       "technologies": [
         {
           "name": "Terraform",
@@ -384,163 +214,19 @@ module.exports = [
           "months": 6
         },
         {
-          "name": "EKS",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "ECR",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "GitHub Actions",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Java",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Spring Boot",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Wicket",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "XML",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Bash",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Docker",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "OSS検証",
-          "years": 0,
-          "months": 6
-        },
-        {
           "name": "AWS",
           "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Kubernetes",
-          "years": 0,
-          "months": 6
+          "months": 6,
+          "services": ["EKS", "ECR", "S3", "Security Hub", "Lambda", "CloudWatch", "SNS"]
         },
         {
           "name": "GitHub",
           "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Git Workflow",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "CI/CD",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Github Copilot",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "英日翻訳",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "日英翻訳",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "英語コミュニケーション",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "技術文書",
-          "years": 0,
-          "months": 6
-        }
-      ],
-      "achievements": [
-        "Terraformによる設定変更・新規リソース作成、Webマニュアルサイト構築",
-        "EKSポッドデータのバックアップ／リストア自動化、ECRイメージ移行・検証",
-        "海外OSSの動作確認、ログ調査、デバッグ、技術文書と英日翻訳対応"
-      ]
-    },
-    "en": {
-      "role": "💻 Cloud and OSS Engineer",
-      "scope": "AWS environment design and provisioning, Terraform configuration management, and OSS validation and operational support",
-      "technologies": [
-        {
-          "name": "Terraform",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "EKS",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "ECR",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "GitHub Actions",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Java",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Spring Boot",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Wicket",
-          "years": 0,
-          "months": 6
+          "months": 6,
+          "notes": "Workflow, Actions"
         },
         {
           "name": "XML",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Linux",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Docker",
           "years": 0,
           "months": 6
         },
@@ -550,75 +236,89 @@ module.exports = [
           "months": 6
         },
         {
-          "name": "OSS Validation",
+          "name": "Docker",
           "years": 0,
           "months": 6
         },
         {
-          "name": "AWS",
+          "name": "OSS",
           "years": 0,
-          "months": 6
+          "months": 8,
+          "notes": "検証, デバッグ, 技術文書作成"
         },
         {
-          "name": "Kubernetes",
+          "name": "AI",
           "years": 0,
-          "months": 6
+          "months": 8,
+          "notes": "GitHub Copilot, Gemini, Sakana AI"
         },
         {
-          "name": "Git/GitHub",
+          "name": "翻訳/通訳",
           "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Git Workflow",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "CI/CD",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "DevOps",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Gradle",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "REST API",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "English to Japanese Translation",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Japanese to English Translation",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "English Communication",
-          "years": 0,
-          "months": 6
-        },
-        {
-          "name": "Technical Documentation",
-          "years": 0,
-          "months": 6
+          "months": 8,
+          "notes": "海外OSSを使用しているため、英日翻訳および通訳"
         }
       ],
       "achievements": [
-        "Terraform configuration changes and new resource provisioning; web manual site development",
-        "EKS pod-data backup/restore automation and ECR image migration validation",
-        "Overseas OSS validation, log investigation, debugging, technical documentation, and Japanese-English translation support"
+        "TerraformによるAWSリソース管理とマニュアルサイト構築",
+        "EKSデータのバックアップ・リストア、ECRイメージ移行",
+        "OSS検証、ログ調査、デバッグ、技術文書作成"
+      ]
+    },
+    "en": {
+      "role": "💻 Cloud and OSS Engineer",
+      "scope": "AWS design/development, OSS validation, and translation/interpretation support",
+      "technologies": [
+        {
+          "name": "AWS",
+          "years": 0,
+          "months": 8,
+          "services": ["EKS", "ECR", "S3", "Security Hub", "Lambda", "CloudWatch", "SNS"]
+        },
+        {
+          "name": "Terraform",
+          "years": 0,
+          "months": 8
+        },        
+        {
+          "name": "GitHub",
+          "years": 0,
+          "months": 8,
+          "notes": "Workflow and Actions(CI/CD)"
+        },
+        {
+          "name": "XML",
+          "years": 0,
+          "months": 8
+        },
+        {
+          "name": "Docker",
+          "years": 0,
+          "months": 8
+        },
+        {
+          "name": "AI",
+          "years": 0,
+          "months": 8,
+          "notes": "GitHub Copilot, Gemini, and Sakana AI"
+        },
+        {
+          "name": "OSS",
+          "years": 0,
+          "months": 8,
+          "notes": "Validation, debugging, and technical documentation"
+        },
+        {
+          "name": "Translation/Interpretation",
+          "years": 0,
+          "months": 8,
+          "notes": "English-Japanese translation and interpretation for overseas OSS"
+        }
+      ],
+      "achievements": [
+        "AWS resource management with Terraform and web manual development",
+        "EKS data backup/restore and ECR image migration",
+        "OSS validation, log investigation, debugging, and technical documentation"
       ]
     }
   }
