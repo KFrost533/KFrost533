@@ -161,11 +161,6 @@ module.exports = [
           "months": 6
         },
         {
-          "name": "Github Copilot",
-          "years": 1,
-          "months": 0
-        },
-        {
           "name": "AWS",
           "years": 2,
           "months": 4,
@@ -211,40 +206,47 @@ module.exports = [
         {
           "name": "Terraform",
           "years": 0,
-          "months": 6
+          "months": 8
         },
         {
           "name": "AWS",
           "years": 0,
-          "months": 6,
-          "services": ["EKS", "ECR", "S3", "Security Hub", "Lambda", "CloudWatch", "SNS"]
+          "months": 8,
+          "services": ["EKS", "ECR", "S3", "IAM", "Security Hub", "Lambda", "EventBridge", "CloudWatch", "SNS"]
         },
         {
           "name": "GitHub",
           "years": 0,
-          "months": 6,
+          "months": 8,
           "notes": "Workflow, Actions"
         },
         {
           "name": "XML",
           "years": 0,
-          "months": 6
+          "months": 8
         },
         {
           "name": "Bash",
           "years": 0,
-          "months": 6
+          "months": 8
         },
         {
           "name": "Docker",
           "years": 0,
-          "months": 6
+          "months": 8
         },
         {
           "name": "OSS",
           "years": 0,
           "months": 8,
-          "notes": "検証, デバッグ, 技術文書作成"
+          "notes": "テスト、デバッグ、技術文書作成",
+          "services": ["testLink", "magicPod", "Grafana", "Prometheus", "midPoint"]
+        },
+        {
+          "name": "memoQ",
+          "years": 0,
+          "months": 3,
+          "notes": "OSSのUI翻訳"
         },
         {
           "name": "AI",
@@ -273,7 +275,7 @@ module.exports = [
           "name": "AWS",
           "years": 0,
           "months": 8,
-          "services": ["EKS", "ECR", "S3", "Security Hub", "Lambda", "CloudWatch", "SNS"]
+          "services": ["EKS", "ECR", "S3", "IAM", "Security Hub", "Lambda", "EventBridge", "CloudWatch", "SNS"]
         },
         {
           "name": "Terraform",
@@ -306,7 +308,14 @@ module.exports = [
           "name": "OSS",
           "years": 0,
           "months": 8,
-          "notes": "Validation, debugging, and technical documentation"
+          "notes": "Validation, debugging, and technical documentation",
+          "services": ["testLink", "magicPod", "Grafana", "Prometheus", "midPoint"]
+        },
+        {
+          "name": "memoQ",
+          "years": 0,
+          "months": 3,
+          "notes": "For OSS UI translation"
         },
         {
           "name": "Translation/Interpretation",

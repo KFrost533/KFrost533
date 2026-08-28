@@ -33,6 +33,81 @@
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+/* Future Work Roadmap */
+.roadmap-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.roadmap-table th:nth-child(1) { width: 18%; }
+.roadmap-table th:nth-child(2) { width: 22%; }
+.roadmap-table th:nth-child(3) { width: 40%; }
+.roadmap-table th:nth-child(4) { width: 20%; }
+
+.roadmap-table th,
+.roadmap-table td {
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.roadmap-table td {
+  line-height: 1.65;
+}
+
+.roadmap-initiatives {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.roadmap-initiatives li + li {
+  margin-top: 0.55rem;
+}
+
+.roadmap-metrics {
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .roadmap-table,
+  .roadmap-table tbody,
+  .roadmap-table tr,
+  .roadmap-table td {
+    display: block;
+  }
+
+  .roadmap-table tr:first-child {
+    display: none;
+  }
+
+  .roadmap-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .roadmap-table td {
+    width: auto !important;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .roadmap-table td:last-child {
+    border-bottom: 0;
+  }
+
+  .roadmap-table td::before {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--secondary-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    content: attr(data-label);
+  }
+}
+
 /* Experience Timeline */
 .experience-timeline {
   position: relative;

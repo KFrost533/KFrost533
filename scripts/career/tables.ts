@@ -414,23 +414,23 @@ export function renderEnLanguageSkills(items: LanguageSkillItem[]): string {
 export function renderJpFutureWorkRoadmap(items: FutureWorkRoadmapItem[]): string {
   const rows = items
     .map((item) => {
-      const initiatives = item.initiativesJp.map((entry) => `・${entry}`).join('<br/>');
-      return `  <tr>\n    <td align="left"><strong>${item.periodJp}</strong></td>\n    <td align="left"><strong>${item.objectiveJp}</strong></td>\n    <td>${initiatives}</td>\n    <td align="left">${item.metricsJp}</td>\n  </tr>`;
+      const initiatives = item.initiativesJp.map((entry) => `<li>${entry}</li>`).join('');
+      return `  <tr>\n    <td data-label="期間" align="left"><strong>${item.periodJp}</strong></td>\n    <td data-label="主要目標" align="left"><strong>${item.objectiveJp}</strong></td>\n    <td data-label="具体的な取り組み"><ul class="roadmap-initiatives">${initiatives}</ul></td>\n    <td data-label="成果指標" class="roadmap-metrics" align="left">${item.metricsJp}</td>\n  </tr>`;
     })
     .join('\n\n');
 
-  return `<table>\n  <tr>\n    <th align="left">期間</th>\n    <th align="left">主要目標</th>\n    <th align="left">具体的な取り組み</th>\n    <th align="left">成果指標</th>\n  </tr>\n\n${rows}\n</table>`;
+  return `<table class="roadmap-table">\n  <tr>\n    <th align="left">期間</th>\n    <th align="left">主要目標</th>\n    <th align="left">具体的な取り組み</th>\n    <th align="left">成果指標</th>\n  </tr>\n\n${rows}\n</table>`;
 }
 
 export function renderEnFutureWorkRoadmap(items: FutureWorkRoadmapItem[]): string {
   const rows = items
     .map((item) => {
-      const initiatives = item.initiativesEn.map((entry) => `• ${entry}`).join('<br/>');
-      return `  <tr>\n    <td align="left"><strong>${item.periodEn}</strong></td>\n    <td align="left"><strong>${item.objectiveEn}</strong></td>\n    <td>${initiatives}</td>\n    <td align="left">${item.metricsEn}</td>\n  </tr>`;
+      const initiatives = item.initiativesEn.map((entry) => `<li>${entry}</li>`).join('');
+      return `  <tr>\n    <td data-label="Period" align="left"><strong>${item.periodEn}</strong></td>\n    <td data-label="Main Objectives" align="left"><strong>${item.objectiveEn}</strong></td>\n    <td data-label="Specific Initiatives"><ul class="roadmap-initiatives">${initiatives}</ul></td>\n    <td data-label="Success Metrics" class="roadmap-metrics" align="left">${item.metricsEn}</td>\n  </tr>`;
     })
     .join('\n\n');
 
-  return `<table style="width: 100%; table-layout: auto; border-collapse: collapse;">\n  <tr>\n    <th align="left" style="width: 20%; word-wrap: break-word;">Period</th>\n    <th align="left" style="width: 25%; word-wrap: break-word;">Main Objectives</th>\n    <th align="left" style="width: 35%; word-wrap: break-word;">Specific Initiatives</th>\n    <th align="left" style="width: 20%; word-wrap: break-word;">Success Metrics</th>\n  </tr>\n\n${rows}\n</table>`;
+  return `<table class="roadmap-table">\n  <tr>\n    <th align="left">Period</th>\n    <th align="left">Main Objectives</th>\n    <th align="left">Specific Initiatives</th>\n    <th align="left">Success Metrics</th>\n  </tr>\n\n${rows}\n</table>`;
 }
 
 export function renderJpCertifications(groups: CertificationGroup[]): string {
