@@ -59,7 +59,8 @@
 ## Reference
 
 - **Portfolio**: [My portfolio](https://kfrost533.github.io/KFrost533)
-- **Support**: [BuyMeACoffee](https://buymeacoffee.com/kfrost533)
+
+- **Support**:
 
 <a href="https://www.buymeacoffee.com/kfrost533" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
