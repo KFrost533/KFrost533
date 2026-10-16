@@ -56,10 +56,10 @@
 
 ---
 
-## 📞 Contact
+## Reference
 
-- **GitHub**: [My account page](https://github.com/KFrost533)
 - **Portfolio**: [My portfolio](https://kfrost533.github.io/KFrost533)
+- **Support**: [BuyMeACoffee](https://buymeacoffee.com/kfrost533)
 
 <br />
 notes: Refining my portfolio
