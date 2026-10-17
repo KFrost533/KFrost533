@@ -2,34 +2,40 @@
 
 ## 🚀 About Me
 
-- 🔭 Currently working on AWS automation, CI/CD pipelines, and backend design
-- 🌱 Learning cloud automation, web development, and Java fundamentals
-- 💼 Continuously growing as a Software/Cloud Engineer
-- 📚 Passionate about continuous learning and implementing best practices
+- 🔭 Working on AWS automation, CI/CD, and backend design
+- 🌱 Learning React, TypeScript, and Go through Coursera and hands-on projects
+- 💻 Developing and maintaining open-source software
+- 💼 Growing as a Software/Cloud Engineer
+
 
 ## 🎯 Career Experience
 
 | Period | Role & Project | Responsibilities | Key Achievements |
 |--------|--------|--------|------|
-| 2026/1 – Present | **Cloud Engineer and Translator**<br>AWS, Terraform, EKS, OSS, JP-EN Translation and interpretation | Terraform, AWS design and deployment, documentation | EKS backup/restore automation, ECR migration, OSS validation, interpretation and translation |
+| 2026/1 – Present | **AWS Cloud Engineer and Translator**<br>AWS, Terraform, EKS, OSS, JP-EN Translation and interpretation | Terraform, AWS design and deployment, documentation | EKS backup/restore automation, ECR migration, OSS validation, interpretation and translation |
 | 2024/7 – 2025/12 | **AWS Cloud Engineer**<br>CloudFormation, Lambda, Python | CloudFormation, AWS monitoring, Lambda development, incident response | Automated 25 AWS parameters, optimized 360k+ record processing, VBA report automation |
-| 2023/10 – 2024/5 | **Systems Engineer**<br>Lambda, Batch, VBA, EC2 | Refactoring, testing, technical documentation, data visualization | Built an AWS CLI validation tool, verified Python upgrades, improved error handling |
-| 2022/5 – 2023/10 | **Infrastructure Incident Triage**<br>Zabbix, Network, Support Center | Phone support, incident triage, primary troubleshooting | Dispatched US cloud/network incidents to relevant departments and supported overseas teams |
+| 2023/10 – 2024/7 | **App Engineer**<br>Lambda, Batch, VBA, EC2 | Refactoring, testing, technical documentation, data visualization | Built an AWS CLI validation tool, verified Python upgrades, improved error handling |
+| 2022/5 – 2023/10 | **Infrastructure Incident Triage**<br>Network, Support Center | Phone support, incident triage, primary troubleshooting | Dispatched US cloud/network incidents to relevant departments and supported overseas teams |
 
 
-## Public
+## Public OSS
 
-### App
+| App Name | Features | Tech Stack | Repository |
+|---|---|---|---|---|
+| House Ledger System | Offline personal finance tracking with recurring entries and analysis | Tauri, React, SQLite, Capacitor | [app-money-management](https://github.com/frost-house-ledger/app-money-management) | Public |
+| Language Learning AI | Local AI vocabulary help, semantic search, and pronunciation feedback | Tauri, React, FastAPI, PostgreSQL/pgvector, Ollama, Whisper | [app-language-learning](https://github.com/frost-language-learning-ai/app-language-learning) |
+| Video Editing OSS | Local media editing with cropping, timeline tools, and FFmpeg export | Tauri, React, Go, FFmpeg | [app-video-editing](https://github.com/frost-video-editing/app-video-editing) |
+| Video Editing Toolkit OSS | FFmpeg tools for cropping, cutting, trimming, merging, looping, and silence removal | Electron, React, TypeScript, FFmpeg | [app-video-small-toolkit](https://github.com/frost-video-editing-toolkit/app-video-small-toolkit) |
 
-| App Name                 | Features                                                                 | Tech Stack                                 | Repository |
-|--------------------------|--------------------------------------------------------------------------|---------------------------------------------|----|
-| House Ledger System      | Privacy-first, local-only, ad-free, open source                  | React, JavaScript, Electron                 | [frost-house-ledger](https://github.com/frost-house-ledger) |
-| Language Learning AI     | Anki-style language learning AI                                  | React, Electron, FastAPI, JavaScript, Ollama | [frost-language-learning-ai](https://github.com/frost-language-learning-ai) |
-| Secure Memo App          | Local-first, cloud-free, ad-free, open source                    | React, Electron, JavaScript                 | [frost-secure-memo](https://github.com/frost-secure-memo) |
-| Shadowing Learning App   | Local-first, cloud-free, ad-free, open source                    | React, Electron, JavaScript                 | [frost-shadowing](https://github.com/frost-shadowing) |
-| Study Tracker App        | Local-first, cloud-free, ad-free, open source                    | React, Electron, JavaScript                 | [frost-study-tracker](https://github.com/frost-study-tracker) |
-| Video Editing OSS        | Local-first, cloud-free, ad-free, open source                    | React, Electron, JavaScript                 | [frost-video-editing](https://github.com/frost-video-editing) |
-| Video Editing Toolkit OSS | Local-first, cloud-free, ad-free, open source                   | React, Electron, JavaScript                 | [frost-video-editing-toolkit](https://github.com/frost-video-editing-toolkit) |
+
+## Still Developing OSS (Private Repository)
+
+| App Name | Features | Tech Stack | Repository |
+|---|---|---|---|
+| Secure Memo App | Rich-text notes in an AES-256-GCM encrypted local vault | Electron, React, SQLite | [app-memo-secure](https://github.com/frost-secure-memo/app-memo-secure) |
+| Shadowing Learning App | Play model audio, record speech, and display subtitles | Electron, React, TypeScript, MediaRecorder | [app-record-shadowing](https://github.com/frost-shadowing/app-record-shadowing) |
+| Study Tracker App | Track study sessions and export to Google Calendar or iCalendar | Electron, React | [app-study-tracker](https://github.com/frost-study-tracker/app-study-tracker) |
+
 
 <!-- ### Web
 
@@ -39,10 +45,8 @@
 
 ### Learning
 
-#### ☕ Java
-- **Theory & Practice**: Comprehensive content covering Java fundamentals to advanced topics
-- **Projects**: Practical application development
-- **Tech Stack**: Java, Gradle, OOP Design Patterns
+- **Current learning**: React, TypeScript, and Go; also taking courses on Coursera.
+- **Hands-on practice**: Building and maintaining open-source applications.
 
 ---
 
@@ -66,12 +70,12 @@
 
 
 <br />
-notes: Refining my portfolio
 
-<p />
+**Notes: Refining my portfolio**
 
-If you would like to view my full LinkedIn profile, feel free to contact me by email.  
-I prefer to share it directly for privacy reasons.
+<br />
+
+**To see my LinkedIn profile, feel free to contact me by e-mail.**
 
 ---
 
