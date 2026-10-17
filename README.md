@@ -7,6 +7,8 @@
 - 💻 Developing and maintaining open-source software
 - 💼 Growing as a Software/Cloud Engineer
 
+---
+
 
 ## 🎯 Career Experience
 
@@ -17,16 +19,20 @@
 | 2023/10 – 2024/7 | **App Engineer**<br>Lambda, Batch, VBA, EC2 | Refactoring, testing, technical documentation, data visualization | Built an AWS CLI validation tool, verified Python upgrades, improved error handling |
 | 2022/5 – 2023/10 | **Infrastructure Incident Triage**<br>Network, Support Center | Phone support, incident triage, primary troubleshooting | Dispatched US cloud/network incidents to relevant departments and supported overseas teams |
 
+---
+
 
 ## Public OSS
 
 | App Name | Features | Tech Stack | Repository |
-|---|---|---|---|---|
-| House Ledger System | Offline personal finance tracking with recurring entries and analysis | Tauri, React, SQLite, Capacitor | [app-money-management](https://github.com/frost-house-ledger/app-money-management) | Public |
+|---|---|---|---|
+| House Ledger System | Offline personal finance tracking with recurring entries and analysis | Tauri, React, SQLite, Capacitor | [app-money-management](https://github.com/frost-house-ledger/app-money-management) |
 | Language Learning AI | Local AI vocabulary help, semantic search, and pronunciation feedback | Tauri, React, FastAPI, PostgreSQL/pgvector, Ollama, Whisper | [app-language-learning](https://github.com/frost-language-learning-ai/app-language-learning) |
 | Video Editing OSS | Local media editing with cropping, timeline tools, and FFmpeg export | Tauri, React, Go, FFmpeg | [app-video-editing](https://github.com/frost-video-editing/app-video-editing) |
 | Video Editing Toolkit OSS | FFmpeg tools for cropping, cutting, trimming, merging, looping, and silence removal | Electron, React, TypeScript, FFmpeg | [app-video-small-toolkit](https://github.com/frost-video-editing-toolkit/app-video-small-toolkit) |
 
+
+<br />
 
 ## Still Developing OSS (Private Repository)
 
@@ -43,12 +49,16 @@
 |---------------------------|-----------------------------------------------------------|-----------------------|---------------------------------------------------------------------------|------------|
 | About Japanese, Japan     | Info about Japanese language/culture, travel tips, local insights | HTML, CSS, JavaScript | [Visit Here](https://frost-jp-document.github.io/web-jp-explanation/) | [web-jp-explanation](https://github.com/frost-jp-document/web-jp-explanation) | -->
 
+---
+
+
 ### Learning
 
 - **Current learning**: React, TypeScript, and Go; also taking courses on Coursera.
 - **Hands-on practice**: Building and maintaining open-source applications.
 
 ---
+
 
 ## 💻 Skills
 
@@ -60,27 +70,26 @@
 
 ---
 
-## Reference
 
-- **Portfolio**: [My portfolio](https://kfrost533.github.io/KFrost533)
+## 🔗 Portfolio & Support
 
-- **Support**:
+  <a href="https://kfrost533.github.io/KFrost533"><strong>🌐 Visit my portfolio</strong></a>
 
-<a href="https://www.buymeacoffee.com/kfrost533" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+  <br />
 
+  If you find my projects useful, please consider supporting my open-source work.
+
+  <a href="https://www.buymeacoffee.com/kfrost533" rel="noopener noreferrer">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me a Coffee" width="217" height="60" />
+  </a>
+
+  <br />
+  
+  **To view my LinkedIn profile, please contact me by email.**
 
 <br />
-
-**Notes: Refining my portfolio**
-
-<br />
-
-**To see my LinkedIn profile, feel free to contact me by e-mail.**
 
 ---
 
-<div align="center">
 
 💡 **"I continue my learning journey through hands-on coding and online courses like Coursera."**
-
-</div>
