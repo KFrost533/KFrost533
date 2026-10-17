@@ -73,19 +73,24 @@
 
 ## 🔗 Portfolio & Support
 
-  <a href="https://kfrost533.github.io/KFrost533"><strong>🌐 Visit my portfolio</strong></a>
+<a href="https://kfrost533.github.io/KFrost533"><strong>🌐 Visit my portfolio</strong></a>
 
-  <br />
+<br />
 
-  If you find my projects useful, please consider supporting my open-source work.
+If you find my projects useful, please consider supporting my open-source work.
 
-  <a href="https://www.buymeacoffee.com/kfrost533" rel="noopener noreferrer">
+<a href="https://www.buymeacoffee.com/kfrost533" rel="noopener noreferrer">
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me a Coffee" width="217" height="60" />
-  </a>
+</a>
 
-  <br />
-  
-  **To view my LinkedIn profile, please contact me by email.**
+
+<br />
+
+💼 <strong>LinkedIn profile available on request</strong>
+
+<p align="left">
+    Please contact me by email if you would like the link.
+</p>
 
 <br />
 
