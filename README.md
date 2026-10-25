@@ -77,7 +77,7 @@
 
 <br />
 
-**LinkedIn profile available on request.**
+**LinkedIn and Credly profile available on request.**
 
 <p align="left">
     Please contact me by email if you would like the link.
