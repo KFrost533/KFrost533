@@ -11,42 +11,27 @@ echo ===============================================
 echo Kentafrost Content Tools Menu
 echo ===============================================
 echo.
-echo [1] content status確認 (content:status)
-echo [2] career editor起動 (career:editor)
-echo [3] career include更新 (career:update)
-echo [4] blog生成 (blog:generate)
-echo [5] blog生成 ^(verbose^) (blog:generate:verbose)
-echo [6] blog dry-run確認 (blog:check)
-echo [7] 終了
+echo [1] Content status (content:status)
+echo [2] Generate blog (blog:generate)
+echo [3] Generate blog ^(verbose^) (blog:generate:verbose)
+echo [4] Check blog sources (blog:check)
+echo [5] Exit
 echo.
-set /p CHOICE=選択肢を入力してください ^(1-7^): 
+set /p CHOICE=Select an option ^(1-5^):
 
 if "%CHOICE%"=="1" goto run_content_status
-if "%CHOICE%"=="2" goto run_career_editor
-if "%CHOICE%"=="3" goto run_career_update
-if "%CHOICE%"=="4" goto run_blog_generate
-if "%CHOICE%"=="5" goto run_blog_generate_verbose
-if "%CHOICE%"=="6" goto run_blog_check
-if "%CHOICE%"=="7" goto end
+if "%CHOICE%"=="2" goto run_blog_generate
+if "%CHOICE%"=="3" goto run_blog_generate_verbose
+if "%CHOICE%"=="4" goto run_blog_check
+if "%CHOICE%"=="5" goto end
 
 echo.
-echo [WARN] 1-7 の数字を入力してください。
+echo [WARN] Enter a number from 1 to 5.
 timeout /t 2 >nul
 goto menu
 
 :run_content_status
 call npm run content:status
-goto wait_and_back
-
-:run_career_editor
-echo.
-echo [INFO] career editorはサーバーとして起動します。
-echo        停止するには Ctrl+C を押してください。
-call npm run career:editor
-goto wait_and_back
-
-:run_career_update
-call npm run career:update
 goto wait_and_back
 
 :run_blog_generate

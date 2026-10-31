@@ -24,11 +24,10 @@ exclude:
   - README_EN.md
   - vendor/
   - node_modules/
+  - tests/
 
 # Navigation
 header_pages:
-  - doc/Career_JP.md
-  - doc/Career_EN.md
   - blog/index.md
 
 # Social media and links

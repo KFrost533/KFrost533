@@ -25,12 +25,9 @@ function main() {
 
   const checks = [
     checkPath(KFrostRoot, 'KFrost533 root', 'dir'),
-    checkPath(path.join(KFrostRoot, 'assets', 'js', 'career-data'), 'career-data directory', 'dir'),
     checkPath(path.join(KFrostRoot, 'doc', 'blog'), 'blog source directory', 'dir'),
     checkPath(javaPracticeRoot, 'java-practice root', 'dir'),
     checkPath(gradlePath, 'Gradle launcher', 'file'),
-    checkPath(path.join(javaPracticeRoot, 'github_page', 'career', 'career_data_editor.java'), 'Career editor Java source', 'file'),
-    checkPath(path.join(javaPracticeRoot, 'github_page', 'career', 'career_sections_generate.java'), 'Career generator Java source', 'file'),
     checkPath(path.join(javaPracticeRoot, 'github_page', 'blog', 'blog_pages_generate.java'), 'Blog generator Java source', 'file'),
   ];
 
@@ -38,8 +35,6 @@ function main() {
   console.log('');
   if (allOk) {
     console.log('All checks passed. You can run:');
-    console.log('- npm run career:editor');
-    console.log('- npm run career:update');
     console.log('- npm run blog:generate');
     process.exit(0);
   }
